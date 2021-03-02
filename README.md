@@ -34,7 +34,7 @@ Once installed and activated, simply click the badge below to install:
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://github.com/ArkansasWorker/marxists.org-UserCSS/raw/main/style.user.css)
 
-## Customizing & Updating
+## Customizing user styles
 
 Click the Stylus extension icon, then click "Manage."
 
