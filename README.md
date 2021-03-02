@@ -2,6 +2,12 @@
 -----
 A more readable [Marxists.org](https://marxists.org). Features support for dark mode and editable UserCSS settings.
 
+-----
+
+_Disclaimer: The markup on Marxists.org can be inconsistent from section to section, these styles won't apply perfectly on every section. If you find a particularly ill-displaying section, please submit an issue._
+
+-----
+
 ## Examples
 
 <div style="display:flex;flex-direction:row;justify-content:space-between;flex-wrap:nowrap;">
@@ -61,5 +67,4 @@ Click "Edit" on the Installed Styles manager within Stylus and paste the content
 
 Once happy with the changes, submit a pull request.
 
------
 
