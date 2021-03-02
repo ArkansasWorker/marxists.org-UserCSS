@@ -40,7 +40,8 @@ a:active {
 p a[href],
 .author a,
 p a:link,
-li a:link {
+li a:link,
+a.writer:link {
 	text-decoration: underline;
 	font-weight: bold;
 	font-size:inherit;
@@ -52,7 +53,8 @@ p a[href=""] {
 sup.anote a,
 a.anote,
 sup a:link,
-a span.NOTE {
+a span.NOTE,
+sup a[href] {
 	font-size: 10px;
 	color: #fff !important;
 	background: var(--litemode_link)!important;
@@ -61,15 +63,19 @@ a span.NOTE {
 	text-decoration: none;
 	border-radius: 2px;
 	font-weight: bold;
-}
-sup.anote a:hover,
-a.anote:hover,
-sup a:link:hover {
-	background: #000 !important;
-	color:#fff!important;
+
+	&:visited {
+		color:#fff !important;
+	}
+
+	&:hover {
+		background: #000 !important;
+		color:#fff!important;
+	}
 }
 
-span.toc a:link {
+span.toc a:link,
+span.toc a:visited {
 	line-height: 1.5;
 	font-family: var(--font-family-sans);
 	text-decoration: none;
@@ -89,6 +95,9 @@ p.toplink a {
 	display: inline-block;
 }
 
-a.small-red:link {
+a.small-red:link,
+a.small-green:link,
+a.small-red,
+a.small-green {
 	font-size:inherit !important;
 }

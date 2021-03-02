@@ -1,18 +1,55 @@
 /* ==UserStyle==
 @name         Marxists.org Enhanced
 @description  A more readable Marxists.org. Features support for dark mode.
-@namespace    eight04.blogspot
+@namespace    marxists-org.enhanced
 @version      0.0.3
 @author       ArkansasWorker <editor@arkansasworker.com> (https://github.com/ArkansasWorker)
 @homepageURL  https://github.com/ArkansasWorker/marxists.org-UserCSS
 @supportURL   https://github.com/ArkansasWorker/marxists.org-UserCSS/issues
 @license      unlicense
+
 @preprocessor default
-@var          color    liteModePrimaryText "Primary Text Color - Lite mode"    #3B3833
+
+@var          color    liteModeBackgroundColor "Background Color - Lite mode"    			#fbf3e9
+@var          color    liteModePrimaryText "Primary Text Color - Lite mode"    				#3B3833
+@var          color    liteModeHeadingText "Headings Color - Lite mode"    					#393735
+@var          color    liteModeLinkColor "Link Color - Lite mode"    						#1780CF
+@var          color    liteModeLinkHoverColor "Link Color (hover) - Lite mode"    			#0091FF
+@var          color    liteModeLinkVisitedColor "Link Color (visited) - Lite mode"    		#625A9E
+
+@var          color    darkModeBackgroundColor "Background Color - Dark mode"    			#181C23
+@var          color    darkModePrimaryText "Primary Text Color - Dark mode"    				#E3EDFD
+@var          color    darkModeHeadingText "Headings Color - Dark mode"    					rgba(255,255,255,.9)
+@var          color    darkModeLinkColor "Link Color - Dark mode"    						#1780CF
+@var          color    darkModeLinkHoverColor "Link Color (hover) - Dark mode"    			#0091FF
+@var          color    darkModeLinkVisitedColor "Link Color (visited) - Dark mode"    		#625A9E
+
+@var          range    mainColumnMaxWidth "Maximum width of main column"	    			[720,420,1200,20,'px']
 ==/UserStyle== */
 
+:root {
+	--litemode_main-bg: var(--liteModeBackgroundColor, #fbf3e9);
+	--litemode_primary-text: var(--liteModePrimaryText, #3B3833);
+	--litemode_heading-text: var(--liteModeHeadingText, #393735);
+	--litemode_link: var(--liteModeLinkColor, #1780CF);
+	--litemode_link-hover: var(--liteModeLinkHoverColor, #0091FF);
+	--litemode_link-visited: var(--liteModeLinkVisitedColor, #625A9E);
+
+
+	--darkmode_main-bg: var(--darkModeBackgroundColor, #181C23);
+	--darkmode_primary-text: var(--darkModePrimaryText, #E3EDFD);
+	--darkmode_heading-text: var(--darkModeHeadingText, rgba(255,255,255,.9));
+	--darkmode_link: var(--darkModeLinkColor, #0091FF);
+	--darkmode_link-hover: var(--darkModeLinkHoverColor, #0091FF);
+	--darkmode_link-visited: var(--darkModeLinkVisitedColor, #625A9E);
+
+	--max-col-width: var(--mainColumnMaxWidth,720px);
+	
+	--font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+	--font-family-serif: Georgia,serif;
+}
+
 @-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
-	@import "scss/vars";
 	@import "scss/normalize";
 	@import "scss/structure";
 	@import "scss/typography";

@@ -118,3 +118,66 @@ table[border] {
 td.index {
 	padding-top:12px;
 }
+
+
+
+
+
+table.data.data {
+	font-family:var(--font-family-sans) !important;
+	font-size:inherit !important;
+	table-layout:fixed !important;
+
+	td {
+		background:transparent !important;
+		border:0 !important;
+		border-bottom:1px solid rgba(0,0,0,.1) !important;
+		padding:4px !important;
+	}
+
+	td,
+	th,
+	td.head-data,
+	td p {
+		font-size:14px !important;
+		font-family:var(--font-family-sans) !important;
+	}
+
+	th,
+	td.head-data {
+		text-transform:uppercase !important;
+		font-weight:bold !important;
+		line-height:1.1 !important;
+	}
+
+	td p {
+		margin:0 !important;
+		font-size:14px !important;
+	}
+}
+
+td.data.data,
+td.text.text {
+	background:transparent !important;
+	font-size:inherit !important;
+	font-family:var(--font-family-sans) !important;
+	padding:2px !important;
+	border-bottom:1px solid rgba(0,0,0,.1) !important;
+}
+
+td[style*="height"] {
+	font-size:14px !important;
+	height:auto !important;
+	padding:4px !important;
+
+	p {
+		font-size:14px !important;
+		font-family:var(--font-family-sans) !important;
+	}
+}
+
+
+
+
+
+

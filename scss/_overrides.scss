@@ -1,5 +1,6 @@
 
-*[bgColor] {
+*[bgColor],
+body[style*="background"] {
 	background: none!important;
 }
 body[bgColor],
@@ -51,5 +52,28 @@ h3 span[style="font-size: 36pt; color: #000060;"] {
 }
 
 br:first-child {
+	display:none !important;
+}
+
+[style*="border-color: #FFCC33"] {
+	border:0 !important;
+}
+
+td[width="8%"]:empty {
+	display:none !important;
+}
+
+.bebel {
+	background:none !important;
+	width:auto !important;
+	padding:0 !important;
+	border:0 !important;
+}
+
+img[src="trotsky.jpg"] {
+	display:none !important;
+}
+
+td + td[rowspan="8"] {
 	display:none !important;
 }

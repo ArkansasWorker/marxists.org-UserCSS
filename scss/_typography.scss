@@ -1,4 +1,14 @@
 
+b,
+strong {
+	font-weight:bold !important;
+}
+
+em {
+	font-style:italic !important;
+	word-spacing:0 !important;
+	letter-spacing:0 !important;
+}
 
 body,
 span,
@@ -27,6 +37,7 @@ span[style="font-size: 36pt; color: #000060;"] {
 	text-align: left !important;
 	max-width: var(--max-col-width) !important;
 	line-height: 1.25 !important;
+	background:none !important;
 }
 @media (prefers-color-scheme: dark) {
 	h1,
@@ -46,21 +57,45 @@ h1,
 p.title,
 span[style="font-size: 36pt; color: #000060;"] {
 	font-size: 36px !important;
+
+	@media(min-width:1000px) {
+		font-size:42px !important;
+	}
 }
 h2 {
 	font-size: 26px !important;
+
+	@media(min-width:1000px) {
+		font-size:32px !important;
+	}
 }
 h3 {
 	font-size: 22px !important;
+
+	@media(min-width:1000px) {
+		font-size:26px !important;
+	}
 }
 h4 {
 	font-size: 20px !important;
+
+	@media(min-width:1000px) {
+		font-size:24px !important;
+	}
 }
 h5 {
 	font-size: 18px !important;
+
+	@media(min-width:1000px) {
+		font-size:22px !important;
+	}
 }
 h6 {
 	font-size:16px !important;
+
+	@media(min-width:1000px) {
+		font-size:20px !important;
+	}
 }
 @media (prefers-color-scheme: dark) {
 	p.title {
@@ -109,7 +144,7 @@ p.pagenote a {
 p.pagenote,
 p.pagenoteb {
 	font-size:85% !important;
-	font-family:var(--font-family-sans);
+	font-family:var(--font-family-sans) !important;
 }
 p.fst,
 p.quote,
@@ -136,7 +171,23 @@ p.indent {
 		border-left:4px solid #2D3B55;
 	}
 }
+p.indent,
+p.indentb,
+p.indentc {
+	padding:0 !important;
+	border:0 !important;
+	background:none !important;
+}
+p.indent {padding-left:5% !important; & + p {margin-top:-1em !important;}}
+p.indentb {padding-left:10% !important; & + p {margin-top:-1em !important;}}
+p.indentc {padding-left:15% !important;font-size:.95em !important; & + p {margin-top:-1em !important;}}
+
+
+
+
 p.fst{border-left:0!important}
+
+
 blockquote > blockquote,
 body > blockquote {
 	padding: 0;
@@ -191,10 +242,24 @@ p.indent + p.indent {
 	padding-top:0;
 }
 p.fst,
-td.index {
-	padding: 0;
-	background: none;
-	border: 0;
+td.index,
+p.index {
+	padding: 0 !important;
+	background: none !important;
+	border: 0 !important;
+	font-weight:normal !important;
+}
+
+p.index,
+p.toc {
+	margin:1em 0 !important;
+	color:inherit !important;
+	font-family:var(--font-family-sans) !important;
+}
+
+p.toc {
+	font-weight:bold !important;
+	font-size:24px !important;
 }
 
 p .right {
@@ -216,30 +281,37 @@ p.head {
 p.head {
 	margin-bottom: .25em
 }
-p.note {
-	margin-top: 0;
+p.note,
+span.note {
+	display:block !important;
+	color:inherit !important;
+	margin:0 !important;
+	font-size:.85em !important;
+	line-height:1.5 !important;
 }
 p.inline {
-	font-size: .75em;
-	margin: 3em 0;
+	font-size: .85em!important;
+	margin: 3em 0!important;
+	color:inherit!important;
 }
 hr {
-	margin: 2em auto;
-	border: 0;
-	border-bottom: 2px solid rgba(0, 0, 0, .25);
-	background: none;
+	margin: 2em auto !important;
+	border: 0 !important;
+	border-bottom: 2px solid rgba(0, 0, 0, .25) !important;
+	background: none !important;
+	clear:both !important;
 }
 hr:last-of-type {
-	border-bottom: 5px solid #000;
+	border-bottom: 5px solid #000 !important;
 }
 hr.end {
-	width: 100%;
+	width: 100% !important;
 }
 span.info {
 	display: block;
 	margin-top: 1em;
 	text-transform: uppercase;
-	font-size: 75%;
+	font-size: .85em !important;
 	font-weight: bold;
 	letter-spacing: 1px;
 	color: rgba(0, 0, 0, .65);
@@ -251,16 +323,21 @@ span.info {
 }
 
 span.date {
-	color:rgba(0,0,0,.5);
+	color:inherit !important;
+	font-size:.85em !important;
+	line-height:1.35 !important;
+	display:block !important;
 }
 @media (prefers-color-scheme: dark) {
 	span.date {
-		color: rgba(255, 255, 255, .5);
+		color: rgba(255, 255, 255, .5) !important;
 	}
 }
 
+p.author,
 span.author,
 span.subject {
+	margin-left:0 !important;
 	font-size:18px !important;
 	font-weight:bold !important;
 	font-family:var(--font-family-sans) !important;
@@ -273,4 +350,39 @@ span.subject {
 		font-size:inherit !important;
 		text-decoration:none;
 	}
+}
+
+h1 a.group:link,
+h2 a.group:link,
+h3 a.group:link,
+h4 a.group:link {
+	font-size:inherit !important;
+	color:inherit !important;
+}
+
+sup,
+sub {
+	font-family:var(--font-family-sans) !important;
+	line-height:1.1;
+}
+
+span.term,
+span.context {
+	color:inherit !important;
+	font-size:inherit !important;
+	font-family:inherit !important;
+}
+
+span.context {
+	font-style:italic !important;
+}
+
+span.major {
+	border-radius:3px !important;
+	font-size:10px !important;
+	color:#fff !important;
+	font-weight:bold !important;
+	letter-spacing:-.5px;
+	padding:3px !important;
+	box-shadow:0 1px 0 rgba(0,0,0,.25) !important;
 }
