@@ -1,0 +1,120 @@
+table {
+	table-layout: fixed
+}
+td {
+	color: var(--litemode_primary-text) !important;
+}
+@media (prefers-color-scheme: dark) {
+	td {
+		color: var(--darkmode_primary-text) !important;
+	}
+}
+
+
+tr[style*="335533"],
+tr[style*="000055"] {
+	background:transparent !important;
+	padding:0;
+	display:inline;
+	font-size:0;
+}
+tr[style*="335533"] > td,
+tr[style*="000055"] > td {
+	display:inline-block;
+	margin:0;
+}
+
+
+
+
+
+
+
+td.tabs {
+	text-align: left;
+	font-size:11px;
+	vertical-align:middle;
+	padding:2px;
+	margin:4px;
+	width:25%;
+}
+@media (prefers-color-scheme: dark) {
+	td.tabs {
+		background: var(--darkmode_main-bg);
+	}
+}
+td.tabs a.tab:link,
+td.tabs a.tab[href] {
+	background: rgba(0,0,0,.05);
+	color: var(--litemode_link);
+	display: inline-block;
+	width: 100%;
+	border-radius:4px;
+	padding:8px;
+	text-align:center;
+}
+@media (prefers-color-scheme: dark) {
+	td.tabs a.tab:link,
+	td.tabs a.tab[href]  {
+		background:rgba(0,0,0,.1);
+	}
+}
+td.tabs a.tab:link:hover,
+td.tabs a.tab[href]:hover {
+	text-decoration: underline;
+	background: rgba(0,0,0,.1);
+}
+@media (prefers-color-scheme: dark) {
+	td.tabs a.tab:link:hover,
+	td.tabs a.tab[href]:hover {
+		background: rgba(0,0,0,.2);
+	}
+}
+
+
+table,
+table[background="index.jpg"] {
+	background: none !important;
+	max-width: 100%;
+	width: 100%;
+}
+td.note {
+	background: none!important;
+	text-align:left;
+	width: 100%;
+	font-size:14px;
+}
+td.az a:link {
+	display: block;
+	padding: 8px 4px;
+	background: rgba(0, 0, 0, .05);
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
+	border-top: 1px solid rgba(255, 255, 255, .1);
+	font-weight: bold;
+	border-radius: 10px;
+	text-decoration: none;
+}
+td.az a:hover {
+	background: #fff;
+}
+
+tr.alt {
+	background: none!important
+}
+
+table.t2h-toc.t2h-toc,
+td.search {
+	font-family: var(--font-family-sans);
+}
+td.search {
+	display: block;
+}
+tr.shade {background:rgba(255,255,255,.05)}
+
+table[border] {
+	border-color:transparent !important;
+}
+
+td.index {
+	padding-top:12px;
+}

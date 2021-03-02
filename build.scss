@@ -1,0 +1,24 @@
+/* ==UserStyle==
+@name         Marxists.org Enhanced
+@description  A more readable Marxists.org. Features support for dark mode.
+@namespace    eight04.blogspot
+@version      0.0.1
+@author       ArkansasWorker <editor@arkansasworker.com> (https://github.com/ArkansasWorker)
+@homepageURL  https://arkansasworker.com/
+@supportURL   https://arkansasworker.com/
+@license      unlicense
+@preprocessor default
+@var          color    liteModePrimaryText "Primary Text Color - Lite mode"    #3B3833
+==/UserStyle== */
+
+@import "scss/vars";
+@import "scss/normalize";
+@import "scss/structure";
+@import "scss/typography";
+@import "scss/tables";
+@import "scss/links";
+@import "scss/forms_and_inputs";
+@import "scss/images_and_embeds";
+@import "scss/overrides";
+@import "scss/darkmode";
+

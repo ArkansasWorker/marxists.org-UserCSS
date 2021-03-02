@@ -1,0 +1,45 @@
+map + br + form {
+	width: 320px;
+	margin: 0 auto 1em;
+	display: block;
+}
+select,
+input,
+map + br + form select,
+select#subjects2,
+select#sections,
+select#authors,
+input[type="text"],
+input[type="search"] {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	padding: 3px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+	display: inline-block;
+	width: auto;
+}
+input[type="submit"] {
+	background: #1976d2;
+	color: #fff;
+	border-radius: 4px;
+	border: 0;
+	border-bottom: 1px solid rgba(0, 0, 0, .5);
+	padding: 8px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background-color: #222;
+}
+map + br + form table,
+map + br + form table td,
+map + br + form table tr,
+map + br + form table th {
+	display: block;
+}

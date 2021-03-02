@@ -1,0 +1,27 @@
+:root {
+	--litemode_main-bg: #fbf3e9;
+	--litemode_link: #1780CF;
+	--litemode_link-hover: #0091FF;
+	--litemode_link-visited: #625A9E;
+	--litemode_primary-text: #3B3833;
+	--litemode_heading-text: #393735;
+
+
+	--darkmode_main-bg: #181C23;
+	--darkmode_link: #3293FF;
+	--darkmode_link-hover: #0091FF;
+	--darkmode_link-visited: #625A9E;
+	--darkmode_primary-text: #E3EDFD;
+	--darkmode_heading-text: rgba(255,255,255,.9);
+
+	--max-col-width: 600px;
+	
+	--font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+	--font-family-serif: Georgia,serif;
+}
+
+@media(min-width:1000px) {
+	:root {
+		--max-col-width: 720px;
+	}
+}

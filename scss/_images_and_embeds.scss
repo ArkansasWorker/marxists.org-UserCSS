@@ -1,0 +1,61 @@
+img {
+	background: #fff;
+}
+p img {
+	display: block;
+	margin: 2rem auto;
+}
+p img[align="right"],
+img[align="right"] {
+	float: right;
+	margin: 2em -1em 2em 2em;
+	box-shadow: 5px 5px 0 rgba(0, 0, 0, .25);
+	border: 1px solid #000;
+	border-radius: 3px;
+}
+p img[align="left"],
+img[align="left"] {
+	float: left;
+	margin: 2em 2em 2em -1em;
+	box-shadow: 5px 5px 0 rgba(0, 0, 0, .25);
+	border: 1px solid #000;
+	border-radius: 3px;
+}
+p img[align="middle"],
+p img[align="center"],
+img[align="center"] {
+	display: block;
+	margin: 1em auto;
+	box-shadow: 5px 5px 0 rgba(0, 0, 0, .25);
+	border: 1px solid #000;
+	border-radius: 3px;
+}
+
+
+
+
+#album {
+	width: 100%!important;
+}
+#album table {
+	width: 100%!important;
+	max-width: none!important;
+}
+#album table td {
+	padding: 0;
+	object-fit: cover;
+	vertical-align: top;
+	text-align: center;
+}
+#album table td a {
+	display: block;
+	margin: 0 auto;
+	width: 72px;
+	height: 160px;
+	position: relative;
+	overflow: hidden;
+}
+#album table td a img {
+	width: 72px;
+	height: 72px;
+}
