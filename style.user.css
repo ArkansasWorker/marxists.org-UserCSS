@@ -2,7 +2,7 @@
 @name         Marxists.org Enhanced
 @description  A more readable Marxists.org. Features support for dark mode.
 @namespace    eight04.blogspot
-@version      0.0.2
+@version      0.0.3
 @author       ArkansasWorker <editor@arkansasworker.com> (https://github.com/ArkansasWorker)
 @homepageURL  https://github.com/ArkansasWorker/marxists.org-UserCSS
 @supportURL   https://github.com/ArkansasWorker/marxists.org-UserCSS/issues
@@ -10,7 +10,7 @@
 @preprocessor default
 @var          color    liteModePrimaryText "Primary Text Color - Lite mode"    #3B3833
 ==/UserStyle== */
-@-moz-document domain("marxists.org") {
+@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
   :root {
     --litemode_main-bg: #fbf3e9;
     --litemode_link: #1780CF;
