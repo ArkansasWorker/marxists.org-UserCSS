@@ -8,14 +8,14 @@ module.exports = function(grunt) {
 					sourcemap: 'none'
 	            },
 	            files: {
-	                'style.css': 'build.scss'
+	                'style.user.css': 'build.scss'
 	            }
 	        } 
 	    },
 		autoprefixer: {
 			dist: {
 				files: {
-					'style.css': 'style.css' 
+					'style.user.css': 'style.user.css' 
 				}
 			}
 		},
