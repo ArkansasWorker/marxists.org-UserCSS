@@ -367,7 +367,8 @@ sub {
 }
 
 span.term,
-span.context {
+span.context,
+span.minor {
 	color:inherit !important;
 	font-size:inherit !important;
 	font-family:inherit !important;

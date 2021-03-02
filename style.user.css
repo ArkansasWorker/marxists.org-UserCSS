@@ -527,7 +527,8 @@ https://necolas.github.io/normalize.css/
     font-family: var(--font-family-sans) !important;
     line-height: 1.1; }
   span.term,
-  span.context {
+  span.context,
+  span.minor {
     color: inherit !important;
     font-size: inherit !important;
     font-family: inherit !important; }
@@ -881,6 +882,8 @@ https://necolas.github.io/normalize.css/
     display: none !important; }
   td + td[rowspan="8"] {
     display: none !important; }
+  td[width="10%"] h1, td[width="10%"] h2, td[width="10%"] h3, td[width="10%"] h4, td[width="10%"] h5, td[width="10%"] h6 {
+    font-size: inherit !important; }
   @media (prefers-color-scheme: dark) {
     table td,
     td.note,
