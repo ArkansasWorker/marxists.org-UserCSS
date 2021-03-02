@@ -51,7 +51,8 @@ p a[href=""] {
 
 sup.anote a,
 a.anote,
-sup a:link {
+sup a:link,
+a span.NOTE {
 	font-size: 10px;
 	color: #fff !important;
 	background: var(--litemode_link)!important;
@@ -86,4 +87,8 @@ p.toplink {
 p.toplink a {
 	padding: 3px;
 	display: inline-block;
+}
+
+a.small-red:link {
+	font-size:inherit !important;
 }

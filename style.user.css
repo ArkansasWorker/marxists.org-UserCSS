@@ -19,7 +19,7 @@
     --litemode_primary-text: #3B3833;
     --litemode_heading-text: #393735;
     --darkmode_main-bg: #181C23;
-    --darkmode_link: #3293FF;
+    --darkmode_link: #0091FF;
     --darkmode_link-hover: #0091FF;
     --darkmode_link-visited: #625A9E;
     --darkmode_primary-text: #E3EDFD;
@@ -547,7 +547,8 @@ https://necolas.github.io/normalize.css/
     color: inherit; }
   sup.anote a,
   a.anote,
-  sup a:link {
+  sup a:link,
+  a span.NOTE {
     font-size: 10px;
     color: #fff !important;
     background: var(--litemode_link) !important;
@@ -575,6 +576,8 @@ https://necolas.github.io/normalize.css/
   p.toplink a {
     padding: 3px;
     display: inline-block; }
+  a.small-red:link {
+    font-size: inherit !important; }
   map + br + form {
     width: 320px;
     margin: 0 auto 1em;
