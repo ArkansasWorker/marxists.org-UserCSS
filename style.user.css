@@ -1,47 +1,107 @@
 /* ==UserStyle==
-@name         Marxists.org Enhanced
-@description  A more readable Marxists.org. Features support for dark mode.
-@namespace    marxists-org.enhanced
-@version      0.0.5
-@author       ArkansasWorker <editor@arkansasworker.com> (https://github.com/ArkansasWorker)
-@homepageURL  https://github.com/ArkansasWorker/marxists.org-UserCSS
-@supportURL   https://github.com/ArkansasWorker/marxists.org-UserCSS/issues
-@license      unlicense
+@name          Marxists.org Enhanced
+@description   A more readable Marxists.org. Features support for dark mode.
+@namespace     marxists-org.enhanced
+@version       0.0.5
+@author        ArkansasWorker <editor@arkansasworker.com> (https://github.com/ArkansasWorker)
+@homepageURL   https://github.com/ArkansasWorker/marxists.org-UserCSS
+@supportURL    https://github.com/ArkansasWorker/marxists.org-UserCSS/issues
+@license       unlicense
 
-@preprocessor default
+@preprocessor  stylus
 
-@var          color    liteModeBackgroundColor "Background Color - Lite mode"    			#fbf3e9
-@var          color    liteModePrimaryText "Primary Text Color - Lite mode"    				#3B3833
-@var          color    liteModeHeadingText "Headings Color - Lite mode"    					#393735
-@var          color    liteModeLinkColor "Link Color - Lite mode"    						#1780CF
-@var          color    liteModeLinkHoverColor "Link Color (hover) - Lite mode"    			#0091FF
-@var          color    liteModeLinkVisitedColor "Link Color (visited) - Lite mode"    		#625A9E
+@var select  theme "Select theme"             [
+                      "default:Default (supports dark mode)", 
+                      "dracula:Dracula",
+                      "nord:Nord",
+                      "ayudark:Ayu Dark",
+                      "ayulight:Ayu Light"
+                     ]
 
-@var          color    darkModeBackgroundColor "Background Color - Dark mode"    			#181C23
-@var          color    darkModePrimaryText "Primary Text Color - Dark mode"    				#E3EDFD
-@var          color    darkModeHeadingText "Headings Color - Dark mode"    					rgba(255,255,255,.9)
-@var          color    darkModeLinkColor "Link Color - Dark mode"    						#1780CF
-@var          color    darkModeLinkHoverColor "Link Color (hover) - Dark mode"    			#0091FF
-@var          color    darkModeLinkVisitedColor "Link Color (visited) - Dark mode"    		#625A9E
+@var color     liteModeBackgroundColor "Background Color - Lite mode"    #fbf3e9
+@var color     liteModePrimaryText "Primary Text Color - Lite mode"       #3B3833
+@var color     liteModeHeadingText "Headings Color - Lite mode"        #393735
+@var color     liteModeLinkColor "Link Color - Lite mode"          #1780CF
+@var color     liteModeLinkHoverColor "Link Color (hover) - Lite mode"       #0091FF
+@var color     liteModeLinkVisitedColor "Link Color (visited) - Lite mode"      #625A9E
+@var color     liteModeLinkActive "Link Color (active) - Lite Mode"    #111
 
-@var          range    mainColumnMaxWidth "Maximum width of main column"	    			[720,420,1200,20,'px']
+@var color     darkModeBackgroundColor "Background Color - Dark mode"       #181C23
+@var color     darkModePrimaryText "Primary Text Color - Dark mode"       #E3EDFD
+@var color     darkModeHeadingText "Headings Color - Dark mode"        rgba(255,255,255,.9)
+@var color     darkModeLinkColor "Link Color - Dark mode"          #1780CF
+@var color     darkModeLinkHoverColor "Link Color (hover) - Dark mode"       #0091FF
+@var color     darkModeLinkVisitedColor "Link Color (visited) - Dark mode"      rgb(141,127,245)
+
+@var range     mainColumnMaxWidth "Maximum width of main column"     [720,420,1200,20,'px']
+
+@var text      fontFamilySans "Font Family - Sans-Serif"       sans-serif
+@var text      fontFamilySerif "Font Family - Serif"        serif
 ==/UserStyle== */
 :root {
-  --litemode_main-bg: var(--liteModeBackgroundColor, #fbf3e9);
-  --litemode_primary-text: var(--liteModePrimaryText, #3B3833);
-  --litemode_heading-text: var(--liteModeHeadingText, #393735);
-  --litemode_link: var(--liteModeLinkColor, #1780CF);
-  --litemode_link-hover: var(--liteModeLinkHoverColor, #0091FF);
-  --litemode_link-visited: var(--liteModeLinkVisitedColor, #625A9E);
-  --darkmode_main-bg: var(--darkModeBackgroundColor, #181C23);
-  --darkmode_primary-text: var(--darkModePrimaryText, #E3EDFD);
-  --darkmode_heading-text: var(--darkModeHeadingText, rgba(255,255,255,.9));
-  --darkmode_link: var(--darkModeLinkColor, #0091FF);
-  --darkmode_link-hover: var(--darkModeLinkHoverColor, #0091FF);
-  --darkmode_link-visited: var(--darkModeLinkVisitedColor, #625A9E);
   --max-col-width: var(--mainColumnMaxWidth,720px);
-  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
-  --font-family-serif: Georgia,serif; }
+  --font-family-sans: sans-serif;
+  --font-family-serif: serif;
+  --font-heading: sans-serif;
+  --main-bg: white;
+  --primary-text: #222;
+  --light-text: #555;
+  --faint-text: #aaa;
+  --heading-text: #000;
+  --horizontal-rule-border-bottom-props: 2px solid rgba(0, 0, 0, .25);
+  --end-horizontal-rule-border-bottom-props: 5px solid #000;
+  --link: blue;
+  --link-hover: navy;
+  --link-visited: rebeccapurple;
+  --link-active: red;
+  --image-shadow: none;
+  --image-border-props: 1px solid #000;
+  --image-border-radius: 0;
+  --button-bg: #ddd;
+  --button-fg: #000;
+  --button-hv: #ccc;
+  --button-active: #aaa;
+  --button-border-radius: 4px;
+  --input-border: 1px solid var(--light-text);
+  --input-border-focus: 1px solid var(--primary-text);
+  --input-border-radius: 4px;
+  --input-bg: #fff;
+  --input-focus-bg: #fffded;
+  --input-text-color: var(--primary-text);
+  --select-bg: linear-gradient(0deg, #EAEAEA 0%, #FFFFFF 100%);
+  --tab-bg: #eee;
+  --tab-fg: var(--link);
+  --tab-hv: var(--link-hover);
+  --tab-visited: var(--faint-text);
+  --tab-active: var(--link-active);
+  --table-text: var(--primary-text);
+  --table-border-color: rgba(0,0,0,.1);
+  --tab-bg: rgba(0,0,0,.05);
+  --tab-bg-hover: rgba(0,0,0,.1);
+  --tab-link: var(--link);
+  --tab-hover: var(--link-hover);
+  --tab-visited: var(--link-visited);
+  --tab-active: var(--link-active);
+  --tab-border-radius: 4px;
+  --quote-bg: rgba(0,0,0,.025);
+  --quote-border-color: var(--faint-text);
+  --sup-cite-font-size:.85em;
+  --sup-cite-bg:transparent;
+  --sup-cite-bg-hover:transparent;
+  --sup-cite-bg-active:transparent;
+  --sup-cite-bg-visited:transparent;
+  --sup-cite-fg:var(--link);
+  --sup-cite-fg-hover:var(--link-hover);
+  --sup-cite-fg-visited:var(--link-visited);
+  --sup-cite-fg-active:var(--link-active);
+  --sup-cite-border-radius:0px;
+  --sup-cite-text-shadow-props: 0 1px 0 transparent;
+  --back-to-top-bg: #000;
+  --back-to-top-fg: #fff;
+  --back-to-top-hover: #333;
+  --back-to-top-active: #111;
+  --back-to-top-shadow: none;
+  --back-to-top-border-radius: 100px; }
 
 @-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
   /*
@@ -193,17 +253,13 @@ https://necolas.github.io/normalize.css/
     box-sizing: border-box; }
   body {
     margin: 0 auto;
-    background: var(--litemode_main-bg);
+    background: var(--main-bg);
     padding: 0 .75em;
     overflow-x: hidden; }
-  @media (min-width: 720px) {
-    body {
-      max-width: var(--max-col-width);
-      padding: 0; } }
-  @media (prefers-color-scheme: dark) {
-    body {
-      background: var(--darkmode_main-bg) !important;
-      color: #FBFAF8 !important; } }
+    @media (min-width: 720px) {
+      body {
+        max-width: var(--max-col-width);
+        padding: 0; } }
   div.border {
     border: 0;
     background: transparent;
@@ -212,26 +268,41 @@ https://necolas.github.io/normalize.css/
     max-width: var(--max-col-width);
     margin: 0 auto;
     padding: 0; }
-  @media (prefers-color-scheme: dark) {
-    div.border {
-      box-shadow: none;
-      background: none; } }
   center {
     max-width: 100%;
     display: block;
     margin: 2rem auto; }
+  body {
+    color: var(--primary-text); }
   b,
   strong {
     font-weight: bold !important; }
-  em {
+  em,
+  a.cite,
+  p.bubble {
     font-style: italic !important;
     word-spacing: 0 !important;
     letter-spacing: 0 !important; }
+  a.cite,
+  p.bubble {
+    font-weight: normal !important; }
+  p.bubble.bubble {
+    padding: 8px !important;
+    margin: 8px !important;
+    font-size: 16px !important;
+    overflow: hidden;
+    text-align: left !important; }
+    tr > td.note:first-child p.bubble.bubble {
+      margin-left: 0 !important; }
+    tr > td.note:nth-child(2) p.bubble.bubble {
+      margin-right: 0 !important;
+      text-align: right !important; }
   body,
   span,
   sup.anote,
   p.term,
-  span.subject {
+  span.subject,
+  [style*="font-family"] {
     font-family: var(--font-family-sans) !important; }
   h1,
   h2,
@@ -241,29 +312,19 @@ https://necolas.github.io/normalize.css/
   h6,
   p.term,
   p.title,
-  span[style="font-size: 36pt; color: #000060;"] {
+  span[style="font-size: 36pt; color: #000060;"],
+  p.index-list {
     display: block !important;
     margin: 1em auto !important;
     padding: 0 !important;
     font-weight: 800 !important;
     letter-spacing: -.5px !important;
-    font-family: var(--font-family-sans) !important;
-    color: var(--litemode_heading-text) !important;
+    font-family: var(--font-heading) !important;
+    color: var(--heading-text) !important;
     text-align: left !important;
     max-width: var(--max-col-width) !important;
     line-height: 1.25 !important;
     background: none !important; }
-  @media (prefers-color-scheme: dark) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p.term,
-    p.title,
-    span[style="font-size: 36pt; color: #000060;"] {
-      color: var(--darkmode_heading-text) !important; } }
   h1,
   p.title,
   span[style="font-size: 36pt; color: #000060;"] {
@@ -278,10 +339,12 @@ https://necolas.github.io/normalize.css/
     @media (min-width: 1000px) {
       h2 {
         font-size: 32px !important; } }
-  h3 {
+  h3,
+  p.index-list {
     font-size: 22px !important; }
     @media (min-width: 1000px) {
-      h3 {
+      h3,
+      p.index-list {
         font-size: 26px !important; } }
   h4 {
     font-size: 20px !important; }
@@ -298,55 +361,48 @@ https://necolas.github.io/normalize.css/
     @media (min-width: 1000px) {
       h6 {
         font-size: 20px !important; } }
-  @media (prefers-color-scheme: dark) {
-    p.title {
-      color: var(--darkmode_primary-text) !important; } }
   p,
+  p.inline,
   p.information,
   p.footer,
   p.pagenote,
   p.pagenoteb,
+  p.pagenotec,
+  p.pagenoted,
   ol,
   ul,
   ol li,
-  ul li {
+  ul li,
+  p.endnote {
+    background: none !important;
     font-size: 18px !important;
     max-width: var(--max-col-width);
     margin: 0 auto 1em;
     line-height: 1.5;
     text-indent: 0 !important;
-    color: #143a46;
+    color: var(--primary-text) !important;
     text-align: left !important;
     font-family: var(--font-family-serif) !important; }
     @media (min-width: 1000px) {
       p,
+      p.inline,
       p.information,
       p.footer,
       p.pagenote,
       p.pagenoteb,
+      p.pagenotec,
+      p.pagenoted,
       ol,
       ul,
       ol li,
-      ul li {
+      ul li,
+      p.endnote {
         font-size: 20px !important; } }
-  @media (prefers-color-scheme: dark) {
-    p,
-    p.information,
-    p.footer,
-    p.pagenote,
-    p.pagenoteb,
-    ol,
-    ul,
-    ol li,
-    ul li {
-      color: var(--darkmode_primary-text) !important; } }
   p.pagenote a {
-    display: inline-block;
-    padding: 3px; }
+    display: inline-block; }
   p.pagenote,
   p.pagenoteb {
-    font-size: 85% !important;
-    font-family: var(--font-family-sans) !important; }
+    color: var(--light-text) !important; }
   p.fst,
   p.quote,
   blockquote,
@@ -358,17 +414,9 @@ https://necolas.github.io/normalize.css/
     display: block;
     margin: 2em auto;
     padding: 2em;
-    border-left: 4px solid #143a46;
+    border-left: 4px solid var(--quote-border-color);
     text-align: left;
-    background: rgba(0, 0, 0, 0.025); }
-  @media (prefers-color-scheme: dark) {
-    p.fst,
-    p.quote,
-    blockquote,
-    p.quoteb,
-    p.indentb,
-    p.indent {
-      border-left: 4px solid #2D3B55; } }
+    background: var(--quote-bg) !important; }
   p.indent,
   p.indentb,
   p.indentc {
@@ -391,20 +439,20 @@ https://necolas.github.io/normalize.css/
   p.fst {
     border-left: 0 !important; }
   blockquote > blockquote,
-  body > blockquote {
-    padding: 0;
-    border: 0;
-    background: transparent;
-    margin: 0; }
+  body > blockquote,
+  p.title + blockquote {
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 !important; }
   ol.numbered.numbered,
   ul.disc {
-    font-family: var(--font-family-sans) !important;
     font-size: inherit !important;
     line-height: 1.5 !important;
     margin: 2em 1em !important; }
     ol.numbered.numbered li,
     ul.disc li {
-      font-family: var(--font-family-sans) !important; }
+      font-family: var(--font-family-serif) !important; }
       ol.numbered.numbered li p.fst,
       ul.disc li p.fst {
         margin-top: .5em; }
@@ -412,24 +460,23 @@ https://necolas.github.io/normalize.css/
     list-style: disc; }
   a.cite:link,
   a.cite:visited,
-  a.cite:href,
+  a.cite[href],
   a.cite,
   p.bubble {
-    color: #333 !important;
-    font-weight: bold !important; }
-  @media (prefers-color-scheme: dark) {
-    a.cite:link,
-    a.cite:visited,
-    a.cite:href,
-    a.cite,
-    p.bubble {
-      color: var(--darkmode_primary-text) !important; } }
+    display: block !important;
+    color: var(--light-text) !important;
+    font-weight: bold !important;
+    line-height: 1.25; }
+    a.cite:link .fst > a,
+    a.cite:visited .fst > a,
+    a.cite[href] .fst > a,
+    a.cite .fst > a,
+    p.bubble .fst > a {
+      line-height: 1.25 !important; }
   p.fst + p.fst,
   p.quote + p.quote,
   blockquote + blockquote,
-  p.quoteb + p.quoteb,
-  p.indentb + p.indentb,
-  p.indent + p.indent {
+  p.quoteb + p.quoteb {
     margin-top: -2em !important;
     padding-top: 0; }
   p.fst,
@@ -465,41 +512,37 @@ https://necolas.github.io/normalize.css/
     display: block !important;
     color: inherit !important;
     margin: 0 !important;
-    font-size: .85em !important;
+    font-size: inherit !important;
     line-height: 1.5 !important; }
   p.inline {
-    font-size: 0.85em !important;
-    margin: 3em 0 !important;
-    color: inherit !important; }
+    margin: 3em 0 !important; }
   hr {
+    padding: 0 !important;
     margin: 2em auto !important;
+    width: 100% !important;
     border: 0 !important;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.25) !important;
+    border-bottom: var(--horizontal-rule-border-bottom-props) !important;
     background: none !important;
     clear: both !important; }
   hr:last-of-type {
-    border-bottom: 5px solid #000 !important; }
+    border-bottom: var(--end-horizontal-rule-border-bottom-props) !important; }
   hr.end {
     width: 100% !important; }
-  span.info {
-    display: block;
-    margin-top: 1em;
-    text-transform: uppercase;
+  span.info,
+  p.information span.info.info {
+    display: block !important;
+    margin-top: 1em !important;
+    text-transform: uppercase !important;
     font-size: .85em !important;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: rgba(0, 0, 0, 0.65); }
-  @media (prefers-color-scheme: dark) {
-    span.info {
-      color: rgba(255, 255, 255, 0.5); } }
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    color: var(--light-text) !important;
+    font-family: var(--font-family-sans) !important; }
   span.date {
     color: inherit !important;
     font-size: .85em !important;
     line-height: 1.35 !important;
     display: block !important; }
-  @media (prefers-color-scheme: dark) {
-    span.date {
-      color: rgba(255, 255, 255, 0.5) !important; } }
   p.author,
   span.author,
   span.subject {
@@ -528,13 +571,17 @@ https://necolas.github.io/normalize.css/
     line-height: 1.1; }
   span.term,
   span.context,
-  span.minor {
+  span.minor,
+  span.inote,
+  span.infobloc_copyleft {
     color: inherit !important;
     font-size: inherit !important;
     font-family: inherit !important; }
   span.context {
     font-style: italic !important; }
   span.major {
+    display: inline-block !important;
+    background: var(--light-text) !important;
     border-radius: 3px !important;
     font-size: 10px !important;
     color: #fff !important;
@@ -542,13 +589,37 @@ https://necolas.github.io/normalize.css/
     letter-spacing: -.5px;
     padding: 3px !important;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25) !important; }
+  p.sig,
+  span.sig {
+    font-family: cursive !important;
+    font-size: 150% !important;
+    margin-top: 2em !important;
+    margin-bottom: 2em !important;
+    margin-left: 0 !important; }
   table {
     table-layout: fixed; }
+    h1 + table,
+    h2 + table,
+    h3 + table,
+    h4 + table,
+    h5 + table,
+    h6 + table,
+    p + table,
+    ol + table,
+    ul + table,
+    blockquote + table,
+    p table,
+    p + div > table {
+      margin: 2em auto !important; }
   td {
-    color: var(--litemode_primary-text) !important; }
-  @media (prefers-color-scheme: dark) {
-    td {
-      color: var(--darkmode_primary-text) !important; } }
+    color: var(--table-text) !important; }
+  td.index {
+    padding-top: 12px;
+    font-size: 16px !important; }
+  td.indexb {
+    background: none !important;
+    font-size: 14px !important;
+    font-family: var(--font-family-sans) !important; }
   tr[style*="335533"],
   tr[style*="000055"] {
     background: transparent !important;
@@ -560,36 +631,34 @@ https://necolas.github.io/normalize.css/
     display: inline-block;
     margin: 0; }
   td.tabs {
+    background: none !important;
     text-align: left;
     font-size: 11px;
     vertical-align: middle;
     padding: 2px;
     margin: 4px;
     width: 25%; }
-  @media (prefers-color-scheme: dark) {
-    td.tabs {
-      background: var(--darkmode_main-bg); } }
   td.tabs a.tab:link,
   td.tabs a.tab[href] {
-    background: rgba(0, 0, 0, 0.05);
-    color: var(--litemode_link);
-    display: inline-block;
-    width: 100%;
-    border-radius: 4px;
-    padding: 8px;
-    text-align: center; }
-  @media (prefers-color-scheme: dark) {
-    td.tabs a.tab:link,
-    td.tabs a.tab[href] {
-      background: rgba(0, 0, 0, 0.1); } }
-  td.tabs a.tab:link:hover,
-  td.tabs a.tab[href]:hover {
-    text-decoration: underline;
-    background: rgba(0, 0, 0, 0.1); }
-  @media (prefers-color-scheme: dark) {
-    td.tabs a.tab:link:hover,
-    td.tabs a.tab[href]:hover {
-      background: rgba(0, 0, 0, 0.2); } }
+    background: var(--tab-bg) !important;
+    color: var(--tab-link) !important;
+    display: inline-block !important;
+    width: 100% !important;
+    border-radius: var(--tab-border-radius) !important;
+    padding: 8px !important;
+    text-align: center !important; }
+    td.tabs a.tab:link:hover, td.tabs a.tab:link:focus,
+    td.tabs a.tab[href]:hover,
+    td.tabs a.tab[href]:focus {
+      background: var(--tab-bg-hover) !important;
+      color: var(--tab-link) !important;
+      text-decoration: underline !important; }
+    td.tabs a.tab:link:visited,
+    td.tabs a.tab[href]:visited {
+      color: var(--tab-visited) !important; }
+    td.tabs a.tab:link:active,
+    td.tabs a.tab[href]:active {
+      color: var(--tab-active) !important; }
   table,
   table[background="index.jpg"] {
     background: none !important;
@@ -597,33 +666,43 @@ https://necolas.github.io/normalize.css/
     width: 100%; }
   td.note {
     background: none !important;
-    text-align: left;
-    width: 100%;
-    font-size: 14px; }
+    text-align: left !important;
+    width: 100% !important;
+    font-size: 15px !important;
+    line-height: 1.35;
+    padding-bottom: 8px !important; }
   td.az a:link {
-    display: block;
-    padding: 8px 4px;
-    background: rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-weight: bold;
-    border-radius: 10px;
-    text-decoration: none; }
+    display: block !important;
+    padding: 8px 4px !important;
+    background: none !important;
+    font-weight: bold !important;
+    border-radius: 10px !important;
+    text-decoration: none !important; }
   td.az a:hover {
-    background: #fff; }
+    background: transparent !important;
+    color: var(--link-hover) !important; }
   tr.alt {
     background: none !important; }
   table.t2h-toc.t2h-toc,
   td.search {
     font-family: var(--font-family-sans); }
   td.search {
-    display: block; }
+    display: block !important; }
   tr.shade {
     background: rgba(255, 255, 255, 0.05); }
+  td > b,
+  td br + b {
+    display: block !important;
+    line-height: 1.1;
+    margin: 1em 0 .25em 0 !important;
+    text-align: left;
+    font-size: 16px !important;
+    font-weight: bold !important; }
+    td > b + br,
+    td br + b + br {
+      display: none !important; }
   table[border] {
     border-color: transparent !important; }
-  td.index {
-    padding-top: 12px; }
   table.data.data {
     font-family: var(--font-family-sans) !important;
     font-size: inherit !important;
@@ -631,13 +710,13 @@ https://necolas.github.io/normalize.css/
     table.data.data td {
       background: transparent !important;
       border: 0 !important;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+      border-bottom: 1px solid var(--table-border-color) !important;
       padding: 4px !important; }
     table.data.data td,
     table.data.data th,
     table.data.data td.head-data,
     table.data.data td p {
-      font-size: 14px !important;
+      font-size: 16px !important;
       font-family: var(--font-family-sans) !important; }
     table.data.data th,
     table.data.data td.head-data {
@@ -653,37 +732,31 @@ https://necolas.github.io/normalize.css/
     font-size: inherit !important;
     font-family: var(--font-family-sans) !important;
     padding: 2px !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; }
+    border-bottom: 1px solid var(--table-border-color) !important; }
+  td.head {
+    background: none !important; }
   td[style*="height"] {
-    font-size: 14px !important;
+    font-size: 16px !important;
     height: auto !important;
     padding: 4px !important; }
     td[style*="height"] p {
-      font-size: 14px !important;
+      font-size: 16px !important;
       font-family: var(--font-family-sans) !important; }
+  td.textc.textc,
+  p td.textc.textc {
+    font-family: var(--font-family-sans) !important;
+    color: var(--primary-text) !important; }
   a:empty {
     display: none; }
   a:link {
-    color: var(--litemode_link) !important; }
+    color: var(--link) !important; }
   a:visited,
   a:visited:hover {
-    color: var(--litemode_link-visited) !important; }
-  @media (prefers-color-scheme: dark) {
-    a:link {
-      color: var(--litemode_link) !important; }
-    a:visited,
-    a:visited:hover {
-      color: var(--darkmode_link-visited) !important; } }
+    color: var(--link-visited) !important; }
   a:link:hover {
-    color: var(--litemode_link-hover) !important; }
-  @media (prefers-color-scheme: dark) {
-    a:hover {
-      color: var(--darkmode_link-hover) !important; } }
+    color: var(--link-hover) !important; }
   a:active {
-    color: #111 !important; }
-  @media (prefers-color-scheme: dark) {
-    a:active {
-      color: var(--darkmode_primary-text) !important; } }
+    color: var(--link-active) !important; }
   p a[href],
   .author a,
   p a:link,
@@ -692,46 +765,70 @@ https://necolas.github.io/normalize.css/
     text-decoration: underline;
     font-weight: bold;
     font-size: inherit; }
+  .note .author a {
+    text-decoration: none !important; }
   p a[href=""] {
     color: inherit; }
   sup.anote a,
   a.anote,
   sup a:link,
   a span.NOTE,
-  sup a[href] {
-    font-size: 10px;
-    color: #fff !important;
-    background: var(--litemode_link) !important;
+  sup a[href],
+  sup.ednote a[href] {
+    font-size: var(--sup-cite-font-size) !important;
+    color: var(--sup-cite-fg) !important;
+    background: var(--sup-cite-bg) !important;
+    font-family: var(--font-family-sans) !important;
     outline: 0;
-    padding: 1px 3px;
-    text-decoration: none;
-    border-radius: 2px;
-    font-weight: bold; }
+    padding: 2px 3px !important;
+    text-decoration: none !important;
+    border-radius: var(--sup-cite-border-radius) !important;
+    font-weight: bold !important;
+    text-shadow: var(--sup-cite-text-shadow-props) !important; }
+    sup.anote a:hover, sup.anote a:focus,
+    a.anote:hover,
+    a.anote:focus,
+    sup a:link:hover,
+    sup a:link:focus,
+    a span.NOTE:hover,
+    a span.NOTE:focus,
+    sup a[href]:hover,
+    sup a[href]:focus,
+    sup.ednote a[href]:hover,
+    sup.ednote a[href]:focus {
+      background: var(--sup-cite-bg-hover) !important;
+      color: var(--sup-cite-fg-hover) !important; }
     sup.anote a:visited,
     a.anote:visited,
     sup a:link:visited,
     a span.NOTE:visited,
-    sup a[href]:visited {
-      color: #fff !important; }
-    sup.anote a:hover,
-    a.anote:hover,
-    sup a:link:hover,
-    a span.NOTE:hover,
-    sup a[href]:hover {
-      background: #000 !important;
-      color: #fff !important; }
+    sup a[href]:visited,
+    sup.ednote a[href]:visited {
+      background: var(--sup-cite-bg) !important;
+      color: var(--sup-cite-fg) !important; }
+    sup.anote a:active,
+    a.anote:active,
+    sup a:link:active,
+    a span.NOTE:active,
+    sup a[href]:active,
+    sup.ednote a[href]:active {
+      background: var(--sup-cite-bg-hover) !important;
+      color: var(--sup-cite-fg-hover) !important; }
+  sup.enote,
+  sup.ednote {
+    font-size: var(--sup-cite-font-size) !important; }
   span.toc a:link,
   span.toc a:visited {
-    line-height: 1.5;
-    font-family: var(--font-family-sans);
-    text-decoration: none; }
+    line-height: 1.5 !important;
+    font-family: var(--font-family-sans) !important;
+    text-decoration: none !important; }
   p.toplink {
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 4px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid var(--link) !important;
     font-size: 14px;
-    font-family: var(--font-family-sans); }
+    font-family: var(--font-family-sans) !important; }
   p.toplink a {
     padding: 3px;
     display: inline-block; }
@@ -740,6 +837,46 @@ https://necolas.github.io/normalize.css/
   a.small-red,
   a.small-green {
     font-size: inherit !important; }
+  [href="#top"],
+  [href="#topofpage"] {
+    position: fixed !important;
+    bottom: 8px !important;
+    right: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 0 !important;
+    background: var(--back-to-top-bg) !important;
+    box-shadow: var(--back-to-top-shadow);
+    border-radius: var(--back-to-top-border-radius); }
+    [href="#top"] > *,
+    [href="#topofpage"] > * {
+      display: none; }
+    [href="#top"]:hover,
+    [href="#topofpage"]:hover {
+      background: var(--back-to-top-hover) !important; }
+    [href="#top"]:active,
+    [href="#topofpage"]:active {
+      background: var(--back-to-top-active) !important; }
+    [href="#top"]::after,
+    [href="#topofpage"]::after {
+      content: "TOP";
+      color: var(--back-to-top-fg) !important;
+      font-size: 12px !important;
+      font-weight: bold !important;
+      letter-spacing: -.5px;
+      position: absolute;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      font-family: var(--font-family-sans) !important; }
+    @media (min-width: 1000px) {
+      [href="#top"],
+      [href="#topofpage"] {
+        width: 50px !important;
+        height: 50px !important;
+        right: 24px !important;
+        bottom: 24px !important; } }
   map + br + form {
     width: 320px;
     margin: 0 auto 1em;
@@ -750,30 +887,75 @@ https://necolas.github.io/normalize.css/
   select#subjects2,
   select#sections,
   select#authors,
+  select#periodicals,
   input[type="text"],
-  input[type="search"] {
-    display: block;
-    width: 100%;
-    font-size: 18px;
-    padding: 3px; }
+  input[type="search"],
+  input[type="submit"] {
+    display: block !important;
+    width: 100% !important;
+    font-size: 18px !important;
+    padding: 6px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    border: var(--input-border) !important;
+    border-radius: var(--input-border-radius) !important;
+    background: var(--input-bg) !important;
+    color: var(--input-text-color) !important; }
+    select:focus,
+    input:focus,
+    map + br + form select:focus,
+    select#subjects2:focus,
+    select#sections:focus,
+    select#authors:focus,
+    select#periodicals:focus,
+    input[type="text"]:focus,
+    input[type="search"]:focus,
+    input[type="submit"]:focus {
+      background: var(--input-focus-bg) !important;
+      border: var(--input-border-focus) !important; }
+  select,
+  select#subjects2,
+  select#sections,
+  select#authors,
+  select#periodicals {
+    background-image: var(--select-bg) !important; }
+    select *,
+    select#subjects2 *,
+    select#sections *,
+    select#authors *,
+    select#periodicals * {
+      color: var(--primary-text) !important;
+      font-size: 16px !important; }
+    select:focus,
+    select#subjects2:focus,
+    select#sections:focus,
+    select#authors:focus,
+    select#periodicals:focus {
+      background-image: var(--select-bg) !important;
+      border: var(--input-border-focus) !important; }
   input[type="radio"],
   input[type="checkbox"] {
-    display: inline-block;
-    width: auto; }
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 2px !important; }
   input[type="submit"] {
-    background: #1976d2;
-    color: #fff;
-    border-radius: 4px;
-    border: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    padding: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer; }
-  input[type="submit"]:hover,
-  input[type="submit"]:focus {
-    background-color: #222; }
+    background: var(--button-bg, #444) !important;
+    color: var(--button-fg, #fff) !important;
+    border-radius: var(--button-border-radius) !important;
+    border: 0 !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    font-size: 16px !important; }
+    input[type="submit"]:hover, input[type="submit"]:focus {
+      background: var(--button-hv) !important; }
+    input[type="submit"]:active {
+      background: var(--button-active) !important; }
+  form br + br {
+    display: none !important; }
   map + br + form table,
   map + br + form table td,
   map + br + form table tr,
@@ -781,31 +963,52 @@ https://necolas.github.io/normalize.css/
     display: block; }
   img {
     background: #fff; }
-  p img {
+  p img,
+  h1 img,
+  h2 img,
+  h3 img,
+  h4 img,
+  h5 img,
+  h6 img {
     display: block;
     margin: 2rem auto; }
   p img[align="right"],
   img[align="right"] {
     float: right;
     margin: 2em -1em 2em 2em;
-    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
-    border: 1px solid #000;
-    border-radius: 3px; }
+    box-shadow: var(--image-shadow);
+    border: var(--image-border-props);
+    border-radius: var(--image-border-radius); }
   p img[align="left"],
   img[align="left"] {
     float: left;
     margin: 2em 2em 2em -1em;
-    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
-    border: 1px solid #000;
-    border-radius: 3px; }
+    box-shadow: var(--image-shadow);
+    border: var(--image-border-props);
+    border-radius: var(--image-border-radius); }
   p img[align="middle"],
   p img[align="center"],
   img[align="center"] {
     display: block;
     margin: 1em auto;
-    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
-    border: 1px solid #000;
-    border-radius: 3px; }
+    box-shadow: var(--image-shadow);
+    border: var(--image-border-props);
+    border-radius: var(--image-border-radius); }
+  [src*="top-image"][width],
+  center > img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important; }
+  [usemap] {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important; }
+  center > img[src="search.jpg"] {
+    display: none !important; }
+  p.bubble img,
+  td.note img {
+    margin: 8px !important; }
   #album {
     width: 100% !important; }
   #album table {
@@ -827,15 +1030,10 @@ https://necolas.github.io/normalize.css/
     width: 72px;
     height: 72px; }
   *[bgColor],
-  body[style*="background"] {
-    background: none !important; }
+  body[style*="background"],
   body[bgColor],
   body[bgcolor] {
-    background: var(--litemode_main-bg) !important; }
-  @media (prefers-color-scheme: dark) {
-    body[bgColor],
-    body[bgcolor] {
-      background: var(--darkmode_main-bg) !important; } }
+    background: var(--main-bg) !important; }
   *[bordercolor] {
     border: 0; }
   .pageselection {
@@ -861,10 +1059,10 @@ https://necolas.github.io/normalize.css/
   span.book {
     font-family: inherit !important;
     color: inherit !important;
-    font-style: italic !important;
-    font-weight: bold !important; }
+    font-weight: bold !important;
+    font-size: inherit !important; }
   span[style*="#000060"] {
-    color: var(--litemode_primary-text) !important; }
+    color: var(--primary-text) !important; }
   h3 span[style="font-size: 36pt; color: #000060;"] {
     margin-top: 0 !important; }
   br:first-child {
@@ -873,24 +1071,474 @@ https://necolas.github.io/normalize.css/
     border: 0 !important; }
   td[width="8%"]:empty {
     display: none !important; }
-  .bebel {
-    background: none !important;
+  .bebel.bebel {
+    background: var(--main-bg) !important;
     width: auto !important;
     padding: 0 !important;
     border: 0 !important; }
-  img[src="trotsky.jpg"] {
-    display: none !important; }
   td + td[rowspan="8"] {
     display: none !important; }
   td[width="10%"] h1, td[width="10%"] h2, td[width="10%"] h3, td[width="10%"] h4, td[width="10%"] h5, td[width="10%"] h6 {
     font-size: inherit !important; }
-  @media (prefers-color-scheme: dark) {
-    table td,
-    td.note,
-    p.bubble,
-    span.author,
-    .term,
-    span[style*="#000060"],
-    [style*="330033"] {
-      background: none !important;
-      color: var(--darkmode_primary-text) !important; } } }
+  td[width="10%"]:empty {
+    display: none !important; }
+  [style*="word-spacing"] {
+    word-spacing: 0 !important; }
+  [style*="color: yellow"],
+  [style*="color:yellow"] {
+    color: inherit !important; } }
+
+/*
+
+Default
+(Supports dark mode)
+
+*/
+
+
+@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+ if theme == default {
+
+  :root {
+   --max-col-width: var(--mainColumnMaxWidth,720px);
+
+   --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+   --font-family-serif: Georgia,serif;
+   --font-heading: var(--font-family-sans);
+
+   --main-bg: var(--liteModeBackgroundColor, #fbf3e9);
+
+   --primary-text: var(--liteModePrimaryText, #3B3833);
+    --light-text: #867d73;
+    --faint-text: #aaa29a;
+    --heading-text: var(--liteModeHeadingText, #393735);
+
+   --horizontal-rule-border-bottom-props: 2px solid rgba(0, 0, 0, .25);
+   --end-horizontal-rule-border-bottom-props: 5px solid #000;
+
+   --link: var(--liteModeLinkColor, #1780CF);
+   --link-hover: var(--liteModeLinkHoverColor, #0091FF);
+   --link-visited: var(--liteModeLinkVisitedColor, #625A9E);
+   --link-active: var(--liteModeLinkHoverColor, #0091FF);    
+
+   --image-shadow: none;
+   --image-border-props: 1px solid #000;
+   --image-border-radius: 0;
+
+   --button-bg: var(--link);
+   --button-fg: #fff;
+   --button-hv: var(--link-hover);
+   --button-active: #aaa;
+   --button-border-radius: 4px;
+
+   --input-border: 1px solid var(--light-text);
+   --input-border-focus: 1px solid var(--primary-text);
+   --input-border-radius: 4px;
+   --input-bg: #fff;
+   --input-focus-bg: #fffded;
+   --input-text-color: #000;
+   --select-bg: linear-gradient(0deg, #EAEAEA 0%, #FFFFFF 100%);
+
+   --table-text: var(--primary-text);
+   --table-border-color: rgba(0,0,0,.1);
+
+   --tab-bg: rgba(0,0,0,.05);
+   --tab-bg-hover: rgba(0,0,0,.1);
+   --tab-link: var(--link);
+   --tab-hover: var(--link-hover);
+   --tab-visited: var(--link-visited);
+   --tab-active: var(--link-active);
+   --tab-border-radius: 4px;
+
+   --quote-bg: rgba(0,0,0,.025);
+   --quote-border-color: var(--faint-text);
+
+   --sup-cite-font-size:.85em;
+   --sup-cite-bg: var(--link);
+   --sup-cite-bg-hover: var(--link-hover);
+   --sup-cite-bg-active: transparent;
+   --sup-cite-bg-visited: transparent;
+   --sup-cite-fg: #fff;
+   --sup-cite-fg-hover: #fff;
+   --sup-cite-fg-visited:var(--link-visited);
+   --sup-cite-fg-active:var(--link-active);
+   --sup-cite-border-radius:3px;
+   --sup-cite-text-shadow-props: 0 1px 0 rgba(0,0,0,.1);
+
+   --back-to-top-bg: #000;
+   --back-to-top-fg: #fff;
+   --back-to-top-hover: #333;
+   --back-to-top-active: #111;
+   --back-to-top-shadow: none;
+   --back-to-top-border-radius: 100px;
+  }
+ }
+
+ @media (prefers-color-scheme: dark) {
+  :root {
+   --main-bg: var(--darkModeBackgroundColor, #181C23);
+
+   --primary-text: var(--darkModePrimaryText, #E3EDFD);
+    --light-text: #a3aebf;
+    --faint-text: #4d5563;
+    --heading-text: var(--darkModeHeadingText, rgba(255,255,255,.9));
+
+   --link: var(--darkModeLinkColor, #0091FF);
+   --link-hover: var(--darkModeLinkHoverColor, #66bdff);
+   --link-visited: var(--darkModeLinkVisitedColor, #A078FF);
+   --link-active: var(--darkModeLinkActiveColor, #A078FF);
+
+   --input-border: 1px solid rgba(255,255,255,.5);
+   --input-border-focus: 1px solid var(--link);
+   --input-bg: #333;
+   --input-focus-bg: #111;
+   --input-text-color: var(--primary-text);
+   --select-bg: linear-gradient(0deg, #000 0%, #222 100%);
+
+   --table-border-color: rgba(255,255,255,.1);
+  }
+ }
+
+}
+
+
+/*
+
+Dracula
+https://draculatheme.com/contribute
+
+*/
+
+
+@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+ if theme == dracula {
+
+  :root {
+   --font-family-sans:  Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+   --font-family-serif: Georgia,serif; 
+   --font-heading: Consolas, monaco, monospace;
+
+   --main-bg: #282a36;
+
+   --primary-text: #f8f8f2;
+    --light-text: #cfcfc8;
+    --faint-text: #9ca1a6;
+   --heading-text: #6272a4;
+
+   --horizontal-rule-border-bottom-props: 2px solid #44475a;
+   --end-horizontal-rule-border-bottom-props: 8px solid #44475a;
+
+   --link: #8be9fd;
+   --link-hover: #6272a4;
+   --link-visited: #bd93f9;
+   --link-active: #f8f8f2;
+
+   --image-shadow: none;
+   --image-border-props: 1px solid #000;
+   --image-border-radius: 0;
+
+   --button-bg: var(--link);
+   --button-fg: rgba(0,0,0,.85);
+   --button-hv: var(--link-hover);
+   --button-active: var(--link);
+   --button-border-radius: 4px;
+
+   --input-border: 1px solid #44475a;
+   --input-border-focus: 1px solid #6272a4;
+   --input-border-radius: 4px;
+   --input-bg: #44475a;
+   --input-focus-bg: #282a36;
+   --input-text-color: #f8f8f2;
+   --select-bg: linear-gradient(0deg, #44475a 0%, #44475a 100%);
+
+   --table-text: var(--primary-text);
+   --table-border-color: rgba(0,0,0,.1);
+
+   --tab-bg: rgba(0,0,0,.05);
+   --tab-bg-hover: rgba(0,0,0,.1);
+   --tab-link: var(--link);
+   --tab-hover: var(--link-hover);
+   --tab-visited: var(--link-visited);
+   --tab-active: var(--link-active);
+   --tab-border-radius: 4px;
+
+   --quote-bg: rgba(0,0,0,.025);
+   --quote-border-color: var(--link);
+
+   --sup-cite-font-size:.85em;
+   --sup-cite-bg:transparent;
+   --sup-cite-bg-hover:transparent;
+   --sup-cite-bg-active:transparent;
+   --sup-cite-bg-visited:transparent;
+   --sup-cite-fg:var(--link);
+   --sup-cite-fg-hover:var(--link-hover);
+   --sup-cite-fg-visited:var(--link-visited);
+   --sup-cite-fg-active:var(--link-active);
+   --sup-cite-border-radius:0px;
+   --sup-cite-text-shadow-props: 0 1px 0 transparent;
+
+   --back-to-top-bg: #000;
+   --back-to-top-fg: #fff;
+   --back-to-top-hover: #333;
+   --back-to-top-active: #111;
+   --back-to-top-shadow: none;
+   --back-to-top-border-radius: 100px;
+  }
+
+ }
+}
+/*
+
+Nord
+https://www.nordtheme.com/docs/colors-and-palettes
+
+*/
+
+
+@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+ if theme == nord {
+
+  :root {
+   --font-family-sans: "Helvetica Neue",Arial, sans-serif !important;
+   --font-family-serif: var(--font-family-sans);
+   --font-heading: var(--font-family-sans);
+
+   --main-bg: #2e3440;
+
+   --primary-text: #eceff4;
+    --light-text: #e5e9f0;
+    --faint-text: #d8dee9;
+   --heading-text: #d8dee9;
+
+   --horizontal-rule-border-bottom-props: 2px solid rgba(0,0,0,.05);
+   --end-horizontal-rule-border-bottom-props: 8px solid #4c566a;
+
+   --link: #88c0d0;
+   --link-hover: #d8dee9;
+   --link-visited: #5e81ac;
+   --link-active: #8fbcbb;
+
+   --image-shadow: none;
+   --image-border-props: 1px solid #000;
+   --image-border-radius: 0;
+
+   --button-bg: #5e81ac;
+   --button-fg: var(--primary-text);
+   --button-hv: var(--link-hover);
+   --button-active: var(--main-bg);
+   --button-border-radius: 4px;
+
+   --input-border: 1px solid rgba(0,0,0,.75);
+   --input-border-focus: 1px solid var(--link);
+   --input-border-radius: 4px;
+   --input-bg: #4c566a;
+   --input-focus-bg: var(--main-bg);
+   --input-text-color: var(--primary-text);
+   --select-bg: linear-gradient(0deg, var(--main-bg) 0%, #4c566a 100%);
+
+   --table-text: var(--primary-text);
+   --table-border-color: #4c566a;
+
+   --tab-bg: rgba(0,0,0,.05);
+   --tab-bg-hover: rgba(0,0,0,.1);
+   --tab-link: var(--link);
+   --tab-hover: var(--link-hover);
+   --tab-visited: var(--link-visited);
+   --tab-active: var(--link-active);
+   --tab-border-radius: 4px;
+
+   --quote-bg: rgba(0,0,0,.25);
+   --quote-border-color: #ebcb8b;
+
+   --sup-cite-font-size:.85em;
+   --sup-cite-bg:transparent;
+   --sup-cite-bg-hover:transparent;
+   --sup-cite-bg-active:transparent;
+   --sup-cite-bg-visited:transparent;
+   --sup-cite-fg:var(--link);
+   --sup-cite-fg-hover:var(--link-hover);
+   --sup-cite-fg-visited:var(--link-visited);
+   --sup-cite-fg-active:var(--link-active);
+   --sup-cite-border-radius:0px;
+   --sup-cite-text-shadow-props: 0 1px 0 transparent;
+
+   --back-to-top-bg: #d8dee9;
+   --back-to-top-fg: #2e3440;
+   --back-to-top-hover: #eceff4;
+   --back-to-top-active: #e5e9f0;
+   --back-to-top-shadow: 0 1px 5px rgba(0,0,0,.01);
+   --back-to-top-border-radius: 0px;
+  }
+
+ }
+}
+/*
+
+Ayu Dark
+https://github.com/ayu-theme/ayu-colors
+
+*/
+
+
+@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+ if theme == ayudark {
+
+  :root {
+   --font-family-sans: "Helvetica Neue",Arial, sans-serif !important;
+   --font-family-serif: var(--font-family-sans);
+   --font-heading: var(--font-family-sans);
+
+   --main-bg: #0a0e14;
+
+   --primary-text: #B3B1AD;
+    --light-text: #4D5566;
+    --faint-text: #1B2733;
+   --heading-text: #95E6CB;
+
+   --horizontal-rule-border-bottom-props: 2px solid #1B2733;
+   --end-horizontal-rule-border-bottom-props: 8px solid #4c566a;
+
+   --link: #E6B450;
+   --link-hover: #FFB454;
+   --link-visited: #E6B673;
+   --link-active: #FF8F40;
+
+   --image-shadow: none;
+   --image-border-props: 1px solid #000;
+   --image-border-radius: 0;
+
+   --button-bg: #E6B450;
+   --button-fg: var(--main-bg);
+   --button-hv: #FFB454;
+   --button-active: #FF8F40;
+   --button-border-radius: 2px;
+
+   --input-border: 1px solid #1B2733;
+   --input-border-focus: 1px solid #59C2FF;
+   --input-border-radius: 2px;
+   --input-bg: #1B2733;
+   --input-focus-bg: #0A0E14;
+   --input-text-color: #fff;
+   --select-bg: linear-gradient(0deg, var(--main-bg) 0%, #1B2733 100%);
+
+   --table-text: var(--primary-text);
+   --table-border-color: #4c566a;
+
+   --tab-bg: #1B2733;
+   --tab-bg-hover: #304357;
+   --tab-link: var(--link);
+   --tab-hover: var(--link-hover);
+   --tab-visited: var(--link-visited);
+   --tab-active: var(--link-active);
+   --tab-border-radius: 2px;
+
+   --quote-bg: #1B2733;
+   --quote-border-color: #E6B450;
+
+   --sup-cite-font-size:.85em;
+   --sup-cite-bg:transparent;
+   --sup-cite-bg-hover:transparent;
+   --sup-cite-bg-active:transparent;
+   --sup-cite-bg-visited:transparent;
+   --sup-cite-fg:var(--link);
+   --sup-cite-fg-hover:var(--link-hover);
+   --sup-cite-fg-visited:var(--link-visited);
+   --sup-cite-fg-active:var(--link-active);
+   --sup-cite-border-radius:0px;
+   --sup-cite-text-shadow-props: 0 1px 0 transparent;
+
+   --back-to-top-bg: #1B2733;
+   --back-to-top-fg: #B3B1AD;
+   --back-to-top-hover: #304357;
+   --back-to-top-active: #1B2733;
+   --back-to-top-shadow: 0 1px 5px rgba(0,0,0,.01);
+   --back-to-top-border-radius: 100px;
+  }
+
+ }
+}
+/*
+
+Ayu Light
+https://github.com/ayu-theme/ayu-colors
+
+*/
+
+
+@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+ if theme == ayulight {
+
+  :root {
+   --font-family-sans: "Helvetica Neue",Arial, sans-serif !important;
+   --font-family-serif: var(--font-family-sans);
+   --font-heading: var(--font-family-sans);
+
+   --main-bg: #FAFAFA;
+
+   --primary-text: #575F66;
+    --light-text: #8A9199;
+    --faint-text: #ABB0B6;
+   --heading-text: #FF9940;
+
+   --horizontal-rule-border-bottom-props: 1px solid #424A5040;
+   --end-horizontal-rule-border-bottom-props: 4px solid #424A5040;
+
+   --link: #399EE6;
+   --link-hover: #55B4D4;
+   --link-visited: #709ECC;
+   --link-active: #A37ACC;
+
+   --image-shadow: none;
+   --image-border-props: 1px solid #000;
+   --image-border-radius: 0;
+
+   --button-bg: #FF9940;
+   --button-fg: #000;
+   --button-hv: #F2AE49;
+   --button-active: #FA8D3E;
+   --button-border-radius: 2px;
+
+   --input-border: 1px solid #ABB0B6;
+   --input-border-focus: 1px solid #399EE6;
+   --input-border-radius: 6px;
+   --input-bg: #F0F0F0;
+   --input-focus-bg: #D1E4F4;
+   --input-text-color: #575F66;
+   --select-bg: linear-gradient(0deg, #fff 0%, #fff 100%);
+
+   --table-text: var(--primary-text);
+   --table-border-color: #424A5040;
+
+   --tab-bg: #8A91991A;
+   --tab-bg-hover: #424A5040;
+   --tab-link: var(--link);
+   --tab-hover: var(--link-hover);
+   --tab-visited: var(--link-visited);
+   --tab-active: var(--link-active);
+   --tab-border-radius: 2px;
+
+   --quote-bg: rgba(0,0,0,.025);
+   --quote-border-color: #F2AE49;
+
+   --sup-cite-font-size:.85em;
+   --sup-cite-bg:transparent;
+   --sup-cite-bg-hover:transparent;
+   --sup-cite-bg-active:transparent;
+   --sup-cite-bg-visited:transparent;
+   --sup-cite-fg:var(--link);
+   --sup-cite-fg-hover:var(--link-hover);
+   --sup-cite-fg-visited:var(--link-visited);
+   --sup-cite-fg-active:var(--link-active);
+   --sup-cite-border-radius:0px;
+   --sup-cite-text-shadow-props: 0 1px 0 transparent;
+
+   --back-to-top-bg: #FF9940;
+   --back-to-top-fg: #111;
+   --back-to-top-hover: #F2AE49;
+   --back-to-top-active: #FA8D3E;
+   --back-to-top-shadow: 0 1px 5px rgba(0,0,0,.01);
+   --back-to-top-border-radius: 100px;
+  }
+
+ }
+}

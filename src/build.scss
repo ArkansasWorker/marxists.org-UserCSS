@@ -1,0 +1,133 @@
+/* ==UserStyle==
+@name         	Marxists.org Enhanced
+@description  	A more readable Marxists.org. Features support for dark mode.
+@namespace    	marxists-org.enhanced
+@version      	__VERSION__
+@author       	ArkansasWorker <editor@arkansasworker.com> (https://github.com/ArkansasWorker)
+@homepageURL  	https://github.com/ArkansasWorker/marxists.org-UserCSS
+@supportURL   	https://github.com/ArkansasWorker/marxists.org-UserCSS/issues
+@license      	unlicense
+
+@preprocessor 	stylus
+
+@var select 	theme "Select theme" 												[
+																						"default:Default (supports dark mode)", 
+																						"dracula:Dracula",
+																						"nord:Nord",
+																						"ayudark:Ayu Dark",
+																						"ayulight:Ayu Light"
+																					]
+
+@var color    	liteModeBackgroundColor "Background Color - Lite mode"				#fbf3e9
+@var color    	liteModePrimaryText "Primary Text Color - Lite mode"    			#3B3833
+@var color    	liteModeHeadingText "Headings Color - Lite mode"    				#393735
+@var color    	liteModeLinkColor "Link Color - Lite mode"    						#1780CF
+@var color    	liteModeLinkHoverColor "Link Color (hover) - Lite mode"    			#0091FF
+@var color    	liteModeLinkVisitedColor "Link Color (visited) - Lite mode"    		#625A9E
+@var color    	liteModeLinkActive "Link Color (active) - Lite Mode"				#111
+
+@var color    	darkModeBackgroundColor "Background Color - Dark mode"    			#181C23
+@var color    	darkModePrimaryText "Primary Text Color - Dark mode"    			#E3EDFD
+@var color    	darkModeHeadingText "Headings Color - Dark mode"    				rgba(255,255,255,.9)
+@var color    	darkModeLinkColor "Link Color - Dark mode"    						#1780CF
+@var color    	darkModeLinkHoverColor "Link Color (hover) - Dark mode"    			#0091FF
+@var color    	darkModeLinkVisitedColor "Link Color (visited) - Dark mode"    		rgb(141,127,245)
+
+@var range    	mainColumnMaxWidth "Maximum width of main column"					[720,420,1200,20,'px']
+
+@var text     	fontFamilySans "Font Family - Sans-Serif"							sans-serif
+@var text     	fontFamilySerif "Font Family - Serif"								serif
+==/UserStyle== */
+
+:root {
+	--max-col-width: var(--mainColumnMaxWidth,720px);
+
+	--font-family-sans: sans-serif;
+	--font-family-serif: serif;
+	--font-heading: sans-serif;
+
+	--main-bg: white;
+
+	--primary-text: #222;
+		--light-text: #555;
+		--faint-text: #aaa;
+	--heading-text: #000;
+
+	--horizontal-rule-border-bottom-props: 2px solid rgba(0, 0, 0, .25);
+	--end-horizontal-rule-border-bottom-props: 5px solid #000;
+
+	--link: blue;
+	--link-hover: navy;
+	--link-visited: rebeccapurple;
+	--link-active: red;
+
+	--image-shadow: none;
+	--image-border-props: 1px solid #000;
+	--image-border-radius: 0;
+
+	--button-bg: #ddd;
+	--button-fg: #000;
+	--button-hv: #ccc;
+	--button-active: #aaa;
+	--button-border-radius: 4px;
+
+	--input-border: 1px solid var(--light-text);
+	--input-border-focus: 1px solid var(--primary-text);
+	--input-border-radius: 4px;
+	--input-bg: #fff;
+	--input-focus-bg: #fffded;
+	--input-text-color: var(--primary-text);
+	--select-bg: linear-gradient(0deg, #EAEAEA 0%, #FFFFFF 100%);
+
+	--tab-bg: #eee;
+	--tab-fg: var(--link);
+	--tab-hv: var(--link-hover);
+	--tab-visited: var(--faint-text);
+	--tab-active: var(--link-active);
+
+	--table-text: var(--primary-text);
+	--table-border-color: rgba(0,0,0,.1);
+
+	--tab-bg: rgba(0,0,0,.05);
+	--tab-bg-hover: rgba(0,0,0,.1);
+	--tab-link: var(--link);
+	--tab-hover: var(--link-hover);
+	--tab-visited: var(--link-visited);
+	--tab-active: var(--link-active);
+	--tab-border-radius: 4px;
+
+	--quote-bg: rgba(0,0,0,.025);
+	--quote-border-color: var(--faint-text);
+
+	--sup-cite-font-size:.85em;
+	--sup-cite-bg:transparent;
+	--sup-cite-bg-hover:transparent;
+	--sup-cite-bg-active:transparent;
+	--sup-cite-bg-visited:transparent;
+	--sup-cite-fg:var(--link);
+	--sup-cite-fg-hover:var(--link-hover);
+	--sup-cite-fg-visited:var(--link-visited);
+	--sup-cite-fg-active:var(--link-active);
+	--sup-cite-border-radius:0px;
+	--sup-cite-text-shadow-props: 0 1px 0 transparent;
+
+	--back-to-top-bg: #000;
+	--back-to-top-fg: #fff;
+	--back-to-top-hover: #333;
+	--back-to-top-active: #111;
+	--back-to-top-shadow: none;
+	--back-to-top-border-radius: 100px;
+}
+
+@-moz-document __DOMAINS__ {
+	@import "scss/normalize";
+	@import "scss/structure";
+	@import "scss/typography";
+	@import "scss/tables";
+	@import "scss/links";
+	@import "scss/forms_and_inputs";
+	@import "scss/images_and_embeds";
+	@import "scss/overrides";
+}
+
+

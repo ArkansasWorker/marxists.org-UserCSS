@@ -1,14 +1,10 @@
-
 *[bgColor],
-body[style*="background"] {
-	background: none!important;
-}
+body[style*="background"],
 body[bgColor],
-body[bgcolor]{background: var(--litemode_main-bg) !important;}
-@media (prefers-color-scheme: dark) {
-	body[bgColor],
-	body[bgcolor]{background: var(--darkmode_main-bg) !important;}
+body[bgcolor] {
+	background: var(--main-bg) !important;
 }
+
 *[bordercolor] {
 	border: 0;
 }
@@ -40,12 +36,12 @@ body[bgcolor]{background: var(--litemode_main-bg) !important;}
 
 span.book {
 	font-family: inherit !important;
-	color: inherit!important;
-	font-style: italic!important;
-	font-weight: bold!important;
+	color: inherit !important;
+	font-weight: bold !important;
+	font-size: inherit !important;
 }
 
-span[style*="#000060"] {color:var(--litemode_primary-text)!important;}
+span[style*="#000060"] {color:var(--primary-text)!important;}
 
 h3 span[style="font-size: 36pt; color: #000060;"] {
 	margin-top:0 !important;
@@ -63,15 +59,11 @@ td[width="8%"]:empty {
 	display:none !important;
 }
 
-.bebel {
-	background:none !important;
+.bebel.bebel {
+	background:var(--main-bg) !important;
 	width:auto !important;
 	padding:0 !important;
 	border:0 !important;
-}
-
-img[src="trotsky.jpg"] {
-	display:none !important;
 }
 
 td + td[rowspan="8"] {
@@ -82,4 +74,17 @@ td[width="10%"] {
 	h1,h2,h3,h4,h5,h6 {
 		font-size:inherit !important;
 	}
+
+	&:empty {
+		display:none !important;
+	}
+}
+
+[style*="word-spacing"] {
+	word-spacing:0 !important;
+}
+
+[style*="color: yellow"],
+[style*="color:yellow"] {
+	color:inherit !important;
 }

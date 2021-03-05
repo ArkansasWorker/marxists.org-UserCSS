@@ -6,21 +6,13 @@
 
 body {
 	margin: 0 auto;
-	background: var(--litemode_main-bg);
+	background: var(--main-bg);
 	padding: 0 .75em;
 	overflow-x: hidden;
-}
-@media(min-width:720px) {
-	body {
+
+	@media(min-width:720px) {
 		max-width: var(--max-col-width);
 		padding: 0;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	body {
-		background: var(--darkmode_main-bg) !important;
-		color: #FBFAF8 !important;
 	}
 }
 
@@ -33,12 +25,7 @@ div.border {
 	margin: 0 auto;
 	padding: 0;
 }
-@media (prefers-color-scheme: dark) {
-	div.border {
-		box-shadow:none;
-		background:none;
-	}
-}
+
 
 
 center {

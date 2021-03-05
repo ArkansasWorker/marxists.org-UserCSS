@@ -1,0 +1,113 @@
+/*
+
+Default
+(Supports dark mode)
+
+*/
+
+
+@-moz-document __DOMAINS__ {
+	if theme == default {
+
+		:root {
+			--max-col-width: var(--mainColumnMaxWidth,720px);
+
+			--font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+			--font-family-serif: Georgia,serif;
+			--font-heading: var(--font-family-sans);
+
+			--main-bg: var(--liteModeBackgroundColor, #fbf3e9);
+
+			--primary-text: var(--liteModePrimaryText, #3B3833);
+				--light-text: #867d73;
+				--faint-text: #aaa29a;
+				--heading-text: var(--liteModeHeadingText, #393735);
+
+			--horizontal-rule-border-bottom-props: 2px solid rgba(0, 0, 0, .25);
+			--end-horizontal-rule-border-bottom-props: 5px solid #000;
+
+			--link: var(--liteModeLinkColor, #1780CF);
+			--link-hover: var(--liteModeLinkHoverColor, #0091FF);
+			--link-visited: var(--liteModeLinkVisitedColor, #625A9E);
+			--link-active: var(--liteModeLinkHoverColor, #0091FF);				
+
+			--image-shadow: none;
+			--image-border-props: 1px solid #000;
+			--image-border-radius: 0;
+
+			--button-bg: var(--link);
+			--button-fg: #fff;
+			--button-hv: var(--link-hover);
+			--button-active: #aaa;
+			--button-border-radius: 4px;
+
+			--input-border: 1px solid var(--light-text);
+			--input-border-focus: 1px solid var(--primary-text);
+			--input-border-radius: 4px;
+			--input-bg: #fff;
+			--input-focus-bg: #fffded;
+			--input-text-color: #000;
+			--select-bg: linear-gradient(0deg, #EAEAEA 0%, #FFFFFF 100%);
+
+			--table-text: var(--primary-text);
+			--table-border-color: rgba(0,0,0,.1);
+
+			--tab-bg: rgba(0,0,0,.05);
+			--tab-bg-hover: rgba(0,0,0,.1);
+			--tab-link: var(--link);
+			--tab-hover: var(--link-hover);
+			--tab-visited: var(--link-visited);
+			--tab-active: var(--link-active);
+			--tab-border-radius: 4px;
+
+			--quote-bg: rgba(0,0,0,.025);
+			--quote-border-color: var(--faint-text);
+
+			--sup-cite-font-size:.85em;
+			--sup-cite-bg: var(--link);
+			--sup-cite-bg-hover: var(--link-hover);
+			--sup-cite-bg-active: transparent;
+			--sup-cite-bg-visited: transparent;
+			--sup-cite-fg: #fff;
+			--sup-cite-fg-hover: #fff;
+			--sup-cite-fg-visited:var(--link-visited);
+			--sup-cite-fg-active:var(--link-active);
+			--sup-cite-border-radius:3px;
+			--sup-cite-text-shadow-props: 0 1px 0 rgba(0,0,0,.1);
+
+			--back-to-top-bg: #000;
+			--back-to-top-fg: #fff;
+			--back-to-top-hover: #333;
+			--back-to-top-active: #111;
+			--back-to-top-shadow: none;
+			--back-to-top-border-radius: 100px;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--main-bg: var(--darkModeBackgroundColor, #181C23);
+
+			--primary-text: var(--darkModePrimaryText, #E3EDFD);
+				--light-text: #a3aebf;
+				--faint-text: #4d5563;
+				--heading-text: var(--darkModeHeadingText, rgba(255,255,255,.9));
+
+			--link: var(--darkModeLinkColor, #0091FF);
+			--link-hover: var(--darkModeLinkHoverColor, #66bdff);
+			--link-visited: var(--darkModeLinkVisitedColor, #A078FF);
+			--link-active: var(--darkModeLinkActiveColor, #A078FF);
+
+			--input-border: 1px solid rgba(255,255,255,.5);
+			--input-border-focus: 1px solid var(--link);
+			--input-bg: #333;
+			--input-focus-bg: #111;
+			--input-text-color: var(--primary-text);
+			--select-bg: linear-gradient(0deg, #000 0%, #222 100%);
+
+			--table-border-color: rgba(255,255,255,.1);
+		}
+	}
+
+}
+

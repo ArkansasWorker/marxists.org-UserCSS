@@ -1,0 +1,158 @@
+
+
+a:empty {
+	display: none
+}
+
+a:link {
+	color: var(--link) !important;
+}
+a:visited,
+a:visited:hover {
+	color: var(--link-visited)!important;
+}
+
+a:link:hover {
+	color: var(--link-hover) !important;
+}
+
+a:active {
+	color: var(--link-active) !important;
+}
+
+
+p a[href],
+.author a,
+p a:link,
+li a:link,
+a.writer:link {
+	text-decoration: underline;
+	font-weight: bold;
+	font-size:inherit;
+}
+.note .author a {
+	text-decoration:none !important;
+}
+p a[href=""] {
+	color: inherit;
+}
+
+sup.anote a,
+a.anote,
+sup a:link,
+a span.NOTE,
+sup a[href],
+sup.ednote a[href] {
+	font-size: var(--sup-cite-font-size) !important;
+	color: var(--sup-cite-fg) !important;
+	background: var(--sup-cite-bg) !important;
+	font-family: var(--font-family-sans) !important;
+	outline: 0;
+	padding: 2px 3px !important;
+	text-decoration: none !important;
+	border-radius: var(--sup-cite-border-radius) !important;
+	font-weight: bold !important;
+	text-shadow: var(--sup-cite-text-shadow-props) !important;
+
+	&:hover,
+	&:focus {
+		background: var(--sup-cite-bg-hover) !important;
+		color: var(--sup-cite-fg-hover) !important;
+	}
+
+	&:visited {
+		background: var(--sup-cite-bg) !important;
+		color: var(--sup-cite-fg) !important;
+	}
+
+	&:active {
+		background: var(--sup-cite-bg-hover) !important;
+		color: var(--sup-cite-fg-hover) !important;
+	}
+}
+
+sup.enote,
+sup.ednote {
+	font-size:var(--sup-cite-font-size) !important;
+}
+
+span.toc a:link,
+span.toc a:visited {
+	line-height: 1.5 !important;
+	font-family: var(--font-family-sans) !important;
+	text-decoration: none !important;
+}
+
+
+p.toplink {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 4px;
+	border-bottom: 2px solid var(--link) !important;
+	font-size: 14px;
+	font-family: var(--font-family-sans) !important;
+}
+p.toplink a {
+	padding: 3px;
+	display: inline-block;
+}
+
+a.small-red:link,
+a.small-green:link,
+a.small-red,
+a.small-green {
+	font-size:inherit !important;
+}
+
+
+// Back to Top
+// Example URL:
+// https://www.marxists.org/history/erol/uk.hightide/
+[href="#top"],
+[href="#topofpage"] {
+	position:fixed !important;
+	bottom:8px !important;
+	right:8px !important;
+	width:40px !important;
+	height:40px !important;
+	font-size:0 !important;
+	background:var(--back-to-top-bg) !important;
+	box-shadow:var(--back-to-top-shadow);
+	border-radius:var(--back-to-top-border-radius);
+
+	& > * {
+		display:none;
+	}
+
+	&:hover {
+		background:var(--back-to-top-hover) !important;
+	}
+
+	&:active {
+		background:var(--back-to-top-active) !important;
+	}
+
+	&::after {
+		content:"TOP";
+		color:var(--back-to-top-fg) !important;
+		font-size:12px !important;
+		font-weight:bold !important;
+		letter-spacing:-.5px;
+		position: absolute;
+		text-shadow:0 1px 0 rgba(0,0,0,.25);
+		top:50%;
+		left:50%;
+		transform:translate3d(-50%,-50%,0);
+		font-family: var(--font-family-sans) !important;
+	}
+
+	@media(min-width:1000px) {
+		width:50px !important;
+		height:50px !important;
+		right:24px !important;
+		bottom:24px !important;
+	}
+}
+
+
+

@@ -1,0 +1,85 @@
+/*
+
+Dracula
+https://draculatheme.com/contribute
+
+*/
+
+
+@-moz-document __DOMAINS__ {
+	if theme == dracula {
+
+		:root {
+			--font-family-sans:  Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+			--font-family-serif: Georgia,serif;	
+			--font-heading: Consolas, monaco, monospace;
+
+			--main-bg: #282a36;
+
+			--primary-text: #f8f8f2;
+				--light-text: #cfcfc8;
+				--faint-text: #9ca1a6;
+			--heading-text: #6272a4;
+
+			--horizontal-rule-border-bottom-props: 2px solid #44475a;
+			--end-horizontal-rule-border-bottom-props: 8px solid #44475a;
+
+			--link: #8be9fd;
+			--link-hover: #6272a4;
+			--link-visited: #bd93f9;
+			--link-active: #f8f8f2;
+
+			--image-shadow: none;
+			--image-border-props: 1px solid #000;
+			--image-border-radius: 0;
+
+			--button-bg: var(--link);
+			--button-fg: rgba(0,0,0,.85);
+			--button-hv: var(--link-hover);
+			--button-active: var(--link);
+			--button-border-radius: 4px;
+
+			--input-border: 1px solid #44475a;
+			--input-border-focus: 1px solid #6272a4;
+			--input-border-radius: 4px;
+			--input-bg: #44475a;
+			--input-focus-bg: #282a36;
+			--input-text-color: #f8f8f2;
+			--select-bg: linear-gradient(0deg, #44475a 0%, #44475a 100%);
+
+			--table-text: var(--primary-text);
+			--table-border-color: rgba(0,0,0,.1);
+
+			--tab-bg: rgba(0,0,0,.05);
+			--tab-bg-hover: rgba(0,0,0,.1);
+			--tab-link: var(--link);
+			--tab-hover: var(--link-hover);
+			--tab-visited: var(--link-visited);
+			--tab-active: var(--link-active);
+			--tab-border-radius: 4px;
+
+			--quote-bg: rgba(0,0,0,.025);
+			--quote-border-color: var(--link);
+
+			--sup-cite-font-size:.85em;
+			--sup-cite-bg:transparent;
+			--sup-cite-bg-hover:transparent;
+			--sup-cite-bg-active:transparent;
+			--sup-cite-bg-visited:transparent;
+			--sup-cite-fg:var(--link);
+			--sup-cite-fg-hover:var(--link-hover);
+			--sup-cite-fg-visited:var(--link-visited);
+			--sup-cite-fg-active:var(--link-active);
+			--sup-cite-border-radius:0px;
+			--sup-cite-text-shadow-props: 0 1px 0 transparent;
+
+			--back-to-top-bg: #000;
+			--back-to-top-fg: #fff;
+			--back-to-top-hover: #333;
+			--back-to-top-active: #111;
+			--back-to-top-shadow: none;
+			--back-to-top-border-radius: 100px;
+		}
+
+	}
+}

@@ -1,0 +1,87 @@
+img {
+	background: #fff;
+}
+p img,
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img {
+	display: block;
+	margin: 2rem auto;
+}
+p img[align="right"],
+img[align="right"] {
+	float: right;
+	margin: 2em -1em 2em 2em;
+	box-shadow: var(--image-shadow);
+	border: var(--image-border-props);
+	border-radius: var(--image-border-radius);
+}
+p img[align="left"],
+img[align="left"] {
+	float: left;
+	margin: 2em 2em 2em -1em;
+	box-shadow: var(--image-shadow);
+	border: var(--image-border-props);
+	border-radius: var(--image-border-radius);
+}
+p img[align="middle"],
+p img[align="center"],
+img[align="center"] {
+	display: block;
+	margin: 1em auto;
+	box-shadow: var(--image-shadow);
+	border: var(--image-border-props);
+	border-radius: var(--image-border-radius);
+}
+
+[src*="top-image"][width],
+center > img {
+	display:block !important;
+	width:100% !important;
+	height:auto !important;
+	max-width:100% !important;
+}
+[usemap] {
+	width:auto !important;
+	height:auto !important;
+	max-width:none !important;
+}
+
+center > img[src="search.jpg"] {
+	display:none!important;
+}
+
+p.bubble img,
+td.note img {
+	margin:8px !important;
+}
+
+
+#album {
+	width: 100%!important;
+}
+#album table {
+	width: 100%!important;
+	max-width: none!important;
+}
+#album table td {
+	padding: 0;
+	object-fit: cover;
+	vertical-align: top;
+	text-align: center;
+}
+#album table td a {
+	display: block;
+	margin: 0 auto;
+	width: 72px;
+	height: 160px;
+	position: relative;
+	overflow: hidden;
+}
+#album table td a img {
+	width: 72px;
+	height: 72px;
+}
