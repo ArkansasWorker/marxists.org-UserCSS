@@ -73,6 +73,6 @@ In order to add a theme, follow these steps:
 
 1. Build the project based on "Contributing" steps above
 2. Duplicate `./src/themes/default.css` and rename to your theme name
-3. Add an entry to `./themes.json` in a key:value format with the key being your theme's filename and the value being a nice name for the theme, like `"chestheme:Che's Theme".
+3. Add an entry to `./themes.json` in a key:value format with the key being your theme's filename and the value being a nice name for the theme, like `"chestheme:Che's Theme"`.
 4. Modify the custom properties to your liking
 5. Check in and make a pull request
