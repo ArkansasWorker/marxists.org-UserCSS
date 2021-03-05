@@ -10,13 +10,7 @@
 
 @preprocessor 	stylus
 
-@var select 	theme "Select theme" 												[
-																						"default:Default (supports dark mode)", 
-																						"dracula:Dracula",
-																						"nord:Nord",
-																						"ayudark:Ayu Dark",
-																						"ayulight:Ayu Light"
-																					]
+@var select 	theme "Select theme" 												__THEMES__
 
 @var color    	liteModeBackgroundColor "Background Color - Lite mode"				#fbf3e9
 @var color    	liteModePrimaryText "Primary Text Color - Lite mode"    			#3B3833

@@ -11,12 +11,12 @@
 @preprocessor  stylus
 
 @var select  theme "Select theme"             [
-                      "default:Default (supports dark mode)", 
-                      "dracula:Dracula",
-                      "nord:Nord",
-                      "ayudark:Ayu Dark",
-                      "ayulight:Ayu Light"
-                     ]
+ "default:Default (with dark mode)",
+ "dracula:Dracula",
+ "nord:Nord",
+ "ayulight:Ayu Light",
+ "ayudark:Ayu Dark"
+]
 
 @var color     liteModeBackgroundColor "Background Color - Lite mode"    #fbf3e9
 @var color     liteModePrimaryText "Primary Text Color - Lite mode"       #3B3833
@@ -103,7 +103,7 @@
   --back-to-top-shadow: none;
   --back-to-top-border-radius: 100px; }
 
-@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+@-moz-document domain("marxists.org"),domain("marxists.info"),domain("marxists.architexturez.net") {
   /*
 --------------------------------------------
 Normalize.css
@@ -1096,7 +1096,7 @@ Default
 */
 
 
-@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+@-moz-document domain("marxists.org"),domain("marxists.info"),domain("marxists.architexturez.net") {
  if theme == default {
 
   :root {
@@ -1210,7 +1210,7 @@ https://draculatheme.com/contribute
 */
 
 
-@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+@-moz-document domain("marxists.org"),domain("marxists.info"),domain("marxists.architexturez.net") {
  if theme == dracula {
 
   :root {
@@ -1295,7 +1295,7 @@ https://www.nordtheme.com/docs/colors-and-palettes
 */
 
 
-@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+@-moz-document domain("marxists.org"),domain("marxists.info"),domain("marxists.architexturez.net") {
  if theme == nord {
 
   :root {
@@ -1374,98 +1374,13 @@ https://www.nordtheme.com/docs/colors-and-palettes
 }
 /*
 
-Ayu Dark
-https://github.com/ayu-theme/ayu-colors
-
-*/
-
-
-@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
- if theme == ayudark {
-
-  :root {
-   --font-family-sans: "Helvetica Neue",Arial, sans-serif !important;
-   --font-family-serif: var(--font-family-sans);
-   --font-heading: var(--font-family-sans);
-
-   --main-bg: #0a0e14;
-
-   --primary-text: #B3B1AD;
-    --light-text: #4D5566;
-    --faint-text: #1B2733;
-   --heading-text: #95E6CB;
-
-   --horizontal-rule-border-bottom-props: 2px solid #1B2733;
-   --end-horizontal-rule-border-bottom-props: 8px solid #4c566a;
-
-   --link: #E6B450;
-   --link-hover: #FFB454;
-   --link-visited: #E6B673;
-   --link-active: #FF8F40;
-
-   --image-shadow: none;
-   --image-border-props: 1px solid #000;
-   --image-border-radius: 0;
-
-   --button-bg: #E6B450;
-   --button-fg: var(--main-bg);
-   --button-hv: #FFB454;
-   --button-active: #FF8F40;
-   --button-border-radius: 2px;
-
-   --input-border: 1px solid #1B2733;
-   --input-border-focus: 1px solid #59C2FF;
-   --input-border-radius: 2px;
-   --input-bg: #1B2733;
-   --input-focus-bg: #0A0E14;
-   --input-text-color: #fff;
-   --select-bg: linear-gradient(0deg, var(--main-bg) 0%, #1B2733 100%);
-
-   --table-text: var(--primary-text);
-   --table-border-color: #4c566a;
-
-   --tab-bg: #1B2733;
-   --tab-bg-hover: #304357;
-   --tab-link: var(--link);
-   --tab-hover: var(--link-hover);
-   --tab-visited: var(--link-visited);
-   --tab-active: var(--link-active);
-   --tab-border-radius: 2px;
-
-   --quote-bg: #1B2733;
-   --quote-border-color: #E6B450;
-
-   --sup-cite-font-size:.85em;
-   --sup-cite-bg:transparent;
-   --sup-cite-bg-hover:transparent;
-   --sup-cite-bg-active:transparent;
-   --sup-cite-bg-visited:transparent;
-   --sup-cite-fg:var(--link);
-   --sup-cite-fg-hover:var(--link-hover);
-   --sup-cite-fg-visited:var(--link-visited);
-   --sup-cite-fg-active:var(--link-active);
-   --sup-cite-border-radius:0px;
-   --sup-cite-text-shadow-props: 0 1px 0 transparent;
-
-   --back-to-top-bg: #1B2733;
-   --back-to-top-fg: #B3B1AD;
-   --back-to-top-hover: #304357;
-   --back-to-top-active: #1B2733;
-   --back-to-top-shadow: 0 1px 5px rgba(0,0,0,.01);
-   --back-to-top-border-radius: 100px;
-  }
-
- }
-}
-/*
-
 Ayu Light
 https://github.com/ayu-theme/ayu-colors
 
 */
 
 
-@-moz-document domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net") {
+@-moz-document domain("marxists.org"),domain("marxists.info"),domain("marxists.architexturez.net") {
  if theme == ayulight {
 
   :root {
@@ -1536,6 +1451,91 @@ https://github.com/ayu-theme/ayu-colors
    --back-to-top-fg: #111;
    --back-to-top-hover: #F2AE49;
    --back-to-top-active: #FA8D3E;
+   --back-to-top-shadow: 0 1px 5px rgba(0,0,0,.01);
+   --back-to-top-border-radius: 100px;
+  }
+
+ }
+}
+/*
+
+Ayu Dark
+https://github.com/ayu-theme/ayu-colors
+
+*/
+
+
+@-moz-document domain("marxists.org"),domain("marxists.info"),domain("marxists.architexturez.net") {
+ if theme == ayudark {
+
+  :root {
+   --font-family-sans: "Helvetica Neue",Arial, sans-serif !important;
+   --font-family-serif: var(--font-family-sans);
+   --font-heading: var(--font-family-sans);
+
+   --main-bg: #0a0e14;
+
+   --primary-text: #B3B1AD;
+    --light-text: #4D5566;
+    --faint-text: #1B2733;
+   --heading-text: #95E6CB;
+
+   --horizontal-rule-border-bottom-props: 2px solid #1B2733;
+   --end-horizontal-rule-border-bottom-props: 8px solid #4c566a;
+
+   --link: #E6B450;
+   --link-hover: #FFB454;
+   --link-visited: #E6B673;
+   --link-active: #FF8F40;
+
+   --image-shadow: none;
+   --image-border-props: 1px solid #000;
+   --image-border-radius: 0;
+
+   --button-bg: #E6B450;
+   --button-fg: var(--main-bg);
+   --button-hv: #FFB454;
+   --button-active: #FF8F40;
+   --button-border-radius: 2px;
+
+   --input-border: 1px solid #1B2733;
+   --input-border-focus: 1px solid #59C2FF;
+   --input-border-radius: 2px;
+   --input-bg: #1B2733;
+   --input-focus-bg: #0A0E14;
+   --input-text-color: #fff;
+   --select-bg: linear-gradient(0deg, var(--main-bg) 0%, #1B2733 100%);
+
+   --table-text: var(--primary-text);
+   --table-border-color: #4c566a;
+
+   --tab-bg: #1B2733;
+   --tab-bg-hover: #304357;
+   --tab-link: var(--link);
+   --tab-hover: var(--link-hover);
+   --tab-visited: var(--link-visited);
+   --tab-active: var(--link-active);
+   --tab-border-radius: 2px;
+
+   --quote-bg: #1B2733;
+   --quote-border-color: #E6B450;
+
+   --sup-cite-font-size:.85em;
+   --sup-cite-bg:transparent;
+   --sup-cite-bg-hover:transparent;
+   --sup-cite-bg-active:transparent;
+   --sup-cite-bg-visited:transparent;
+   --sup-cite-fg:var(--link);
+   --sup-cite-fg-hover:var(--link-hover);
+   --sup-cite-fg-visited:var(--link-visited);
+   --sup-cite-fg-active:var(--link-active);
+   --sup-cite-border-radius:0px;
+   --sup-cite-text-shadow-props: 0 1px 0 transparent;
+
+   --back-to-top-bg: #1B2733;
+   --back-to-top-fg: #B3B1AD;
+   --back-to-top-hover: #304357;
+   --back-to-top-active: #1B2733;
    --back-to-top-shadow: 0 1px 5px rgba(0,0,0,.01);
    --back-to-top-border-radius: 100px;
   }

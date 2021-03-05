@@ -1,5 +1,11 @@
-const ApplicableDomains = 'domain("marxists.org"), domain("marxists.info"), domain("marxists.architexturez.net")';
 const sass = require('node-sass');
+const ApplicableDomains = require('./domains.json');
+const Themes = require('./themes.json');
+const FilesToConcat = ["style.user.css"];
+Themes.forEach(function(theme,index,array){
+	FilesToConcat.push('./src/themes/' + theme.split(':')[0] + '.css');
+});
+console.log(FilesToConcat);
 const pkg = require('./package.json');
 
 module.exports = function(grunt) {
@@ -27,8 +33,29 @@ module.exports = function(grunt) {
 			options: {
 				process: function(src, filepath) {
 					// Replaces "__DOMAINS__" keyword with list of applicable domains
-					// (defined at the top of this file)
-					src = src.replace('__DOMAINS__', ApplicableDomains);
+					// (defined in ./domains.json)
+					var domains = '';
+					ApplicableDomains.forEach(function(domain,index,array){
+						if (index === array.length - 1){ 
+							domains += 'domain("'+domain+'")'; // last item, note missing comma
+						} else {
+							domains += 'domain("'+domain+'"),';
+						}
+					});
+					src = src.replace('__DOMAINS__', domains);
+
+					// Replaces "__THEMES__" keyword with list of applicable domains
+					// (defined in ./themes.json)
+					var userCssThemes = '[\n';
+					Themes.forEach(function(theme,index,array){
+						if (index === array.length - 1){ 
+							userCssThemes += '\t"'+theme+'"\n'; // last item, note missing comma
+						} else {
+							userCssThemes += '\t"'+theme+'",\n';
+						}
+					});
+					userCssThemes += ']';
+					src = src.replace('__THEMES__', userCssThemes);
 
 					// Replaces "__VERSION__" keyword with Version Number
 					// (defined at the top of this file)
@@ -42,14 +69,7 @@ module.exports = function(grunt) {
 				}
       		},
 			dist: {
-				src: [
-					'style.user.css',
-					'./src/themes/default.css',
-					'./src/themes/dracula.css',
-					'./src/themes/nord.css',
-					'./src/themes/ayu-dark.css',
-					'./src/themes/ayu-light.css'
-				],
+				src: FilesToConcat,
 				dest: 'style.user.css'
 			}
 		},
