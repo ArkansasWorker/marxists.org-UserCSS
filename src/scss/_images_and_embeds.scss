@@ -54,6 +54,13 @@ center > img[src="search.jpg"] {
 	display:none!important;
 }
 
+center > img[width="197"],
+center > img[width="198"],
+center > img[width="199"],
+center > img[width="200"], {
+	width:200px !important;
+}
+
 p.bubble img,
 td.note img {
 	margin:8px !important;
@@ -84,4 +91,12 @@ td.note img {
 #album table td a img {
 	width: 72px;
 	height: 72px;
+}
+
+
+img[src*="../../espanol/rajkumar-azad/azad2.jpg"] {
+	display:block !important;
+	max-width:100% !important;
+	height:auto !important;
+	margin:0 !important;
 }

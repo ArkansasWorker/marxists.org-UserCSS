@@ -1006,6 +1006,11 @@ https://necolas.github.io/normalize.css/
     max-width: none !important; }
   center > img[src="search.jpg"] {
     display: none !important; }
+  center > img[width="197"],
+  center > img[width="198"],
+  center > img[width="199"],
+  center > img[width="200"] {
+    width: 200px !important; }
   p.bubble img,
   td.note img {
     margin: 8px !important; }
@@ -1029,6 +1034,11 @@ https://necolas.github.io/normalize.css/
   #album table td a img {
     width: 72px;
     height: 72px; }
+  img[src*="../../espanol/rajkumar-azad/azad2.jpg"] {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important; }
   *[bgColor],
   body[style*="background"],
   body[bgColor],
@@ -1086,7 +1096,9 @@ https://necolas.github.io/normalize.css/
     word-spacing: 0 !important; }
   [style*="color: yellow"],
   [style*="color:yellow"],
-  span.span {
+  font[color="#FF0000"],
+  span.span,
+  [style="color: green"] {
     color: inherit !important;
     font-family: inherit !important; }
   span.span {

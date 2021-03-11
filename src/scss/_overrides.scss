@@ -86,7 +86,9 @@ td[width="10%"] {
 
 [style*="color: yellow"],
 [style*="color:yellow"],
-span.span {
+font[color="#FF0000"],
+span.span,
+[style="color: green"] {
 	color:inherit !important;
 	font-family: inherit !important;
 }
