@@ -40,7 +40,6 @@ img[align="center"] {
 [src*="top-image"][width],
 center > img {
 	display:block !important;
-	width:100% !important;
 	height:auto !important;
 	max-width:100% !important;
 }
@@ -57,7 +56,7 @@ center > img[src="search.jpg"] {
 center > img[width="197"],
 center > img[width="198"],
 center > img[width="199"],
-center > img[width="200"], {
+center > img[width="200"] {
 	width:200px !important;
 }
 
@@ -94,7 +93,10 @@ td.note img {
 }
 
 
-img[src*="../../espanol/rajkumar-azad/azad2.jpg"] {
+img[src*="../../espanol/rajkumar-azad/azad2.jpg"],
+td img[src="index01.jpg"],
+img[src*="../../img/fi.jpg"],
+img[src*="etol.jpg"] {
 	display:block !important;
 	max-width:100% !important;
 	height:auto !important;

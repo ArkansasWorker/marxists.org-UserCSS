@@ -358,10 +358,17 @@ span.term,
 span.context,
 span.minor,
 span.inote,
-span.infobloc_copyleft {
+span.infobloc_copyleft,
+span.dt,
+span.sm,
+p.dd em,
+p.dd strong,
+span.tilt,
+span.name {
 	color:inherit !important;
 	font-size:inherit !important;
 	font-family:inherit !important;
+	font-weight:inherit !important;
 }
 
 span.context {

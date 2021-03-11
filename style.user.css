@@ -573,10 +573,17 @@ https://necolas.github.io/normalize.css/
   span.context,
   span.minor,
   span.inote,
-  span.infobloc_copyleft {
+  span.infobloc_copyleft,
+  span.dt,
+  span.sm,
+  p.dd em,
+  p.dd strong,
+  span.tilt,
+  span.name {
     color: inherit !important;
     font-size: inherit !important;
-    font-family: inherit !important; }
+    font-family: inherit !important;
+    font-weight: inherit !important; }
   span.context {
     font-style: italic !important; }
   span.major {
@@ -997,7 +1004,6 @@ https://necolas.github.io/normalize.css/
   [src*="top-image"][width],
   center > img {
     display: block !important;
-    width: 100% !important;
     height: auto !important;
     max-width: 100% !important; }
   [usemap] {
@@ -1034,7 +1040,10 @@ https://necolas.github.io/normalize.css/
   #album table td a img {
     width: 72px;
     height: 72px; }
-  img[src*="../../espanol/rajkumar-azad/azad2.jpg"] {
+  img[src*="../../espanol/rajkumar-azad/azad2.jpg"],
+  td img[src="index01.jpg"],
+  img[src*="../../img/fi.jpg"],
+  img[src*="etol.jpg"] {
     display: block !important;
     max-width: 100% !important;
     height: auto !important;
