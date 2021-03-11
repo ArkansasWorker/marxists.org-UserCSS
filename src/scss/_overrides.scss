@@ -85,6 +85,12 @@ td[width="10%"] {
 }
 
 [style*="color: yellow"],
-[style*="color:yellow"] {
+[style*="color:yellow"],
+span.span {
 	color:inherit !important;
+	font-family: inherit !important;
+}
+span.span {
+	font-weight:bold !important;
+	font-size:150% !important;
 }

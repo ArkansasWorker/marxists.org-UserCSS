@@ -1085,8 +1085,13 @@ https://necolas.github.io/normalize.css/
   [style*="word-spacing"] {
     word-spacing: 0 !important; }
   [style*="color: yellow"],
-  [style*="color:yellow"] {
-    color: inherit !important; } }
+  [style*="color:yellow"],
+  span.span {
+    color: inherit !important;
+    font-family: inherit !important; }
+  span.span {
+    font-weight: bold !important;
+    font-size: 150% !important; } }
 
 /*
 
