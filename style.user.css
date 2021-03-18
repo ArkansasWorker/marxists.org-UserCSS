@@ -2,7 +2,7 @@
 @name          Marxists.org Enhanced
 @description   A more readable Marxists.org. Features support for dark mode.
 @namespace     marxists-org.enhanced
-@version       0.0.7
+@version       0.0.9
 @author        ArkansasWorker <editor@arkansasworker.com> (https://github.com/ArkansasWorker)
 @homepageURL   https://github.com/ArkansasWorker/marxists.org-UserCSS
 @supportURL    https://github.com/ArkansasWorker/marxists.org-UserCSS/issues
@@ -373,12 +373,13 @@ https://necolas.github.io/normalize.css/
   ul,
   ol li,
   ul li,
-  p.endnote {
+  p.endnote,
+  h4.name {
     background: none !important;
     font-size: 18px !important;
-    max-width: var(--max-col-width);
-    margin: 0 auto 1em;
-    line-height: 1.5;
+    max-width: var(--max-col-width) !important;
+    margin: 0 auto 1em !important;
+    line-height: 1.5 !important;
     text-indent: 0 !important;
     color: var(--primary-text) !important;
     text-align: left !important;
@@ -396,8 +397,11 @@ https://necolas.github.io/normalize.css/
       ul,
       ol li,
       ul li,
-      p.endnote {
+      p.endnote,
+      h4.name {
         font-size: 20px !important; } }
+  h4.name {
+    font-weight: normal !important; }
   p.pagenote a {
     display: inline-block; }
   p.pagenote,
@@ -477,7 +481,7 @@ https://necolas.github.io/normalize.css/
   p.quote + p.quote,
   blockquote + blockquote,
   p.quoteb + p.quoteb {
-    margin-top: -2em !important;
+    margin-top: -.5em !important;
     padding-top: 0; }
   p.fst,
   td.index,
@@ -1106,6 +1110,8 @@ https://necolas.github.io/normalize.css/
   [style*="color: yellow"],
   [style*="color:yellow"],
   font[color="#FF0000"],
+  [style*="005080"],
+  [style*="0080c0"],
   span.span,
   [style="color: green"] {
     color: inherit !important;

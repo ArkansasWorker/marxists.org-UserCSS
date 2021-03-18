@@ -127,12 +127,13 @@ ol,
 ul,
 ol li,
 ul li,
-p.endnote {
+p.endnote,
+h4.name {
 	background:none!important;
 	font-size: 18px !important;
-	max-width: var(--max-col-width);
-	margin: 0 auto 1em;
-	line-height: 1.5;
+	max-width: var(--max-col-width) !important;
+	margin: 0 auto 1em !important;
+	line-height: 1.5 !important;
 	text-indent: 0 !important;
 	color: var(--primary-text) !important;
 	text-align: left !important;
@@ -141,6 +142,10 @@ p.endnote {
 	@media(min-width:1000px) {
 		font-size:20px !important;
 	}
+}
+
+h4.name {
+	font-weight:normal!important;
 }
 
 p.pagenote a {
@@ -231,7 +236,7 @@ p.fst + p.fst,
 p.quote + p.quote,
 blockquote + blockquote,
 p.quoteb + p.quoteb {
-	margin-top: -2em !important;
+	margin-top: -.5em !important;
 	padding-top:0;
 }
 p.fst,
