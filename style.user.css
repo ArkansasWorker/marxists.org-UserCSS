@@ -38,70 +38,72 @@
 @var text      fontFamilySans "Font Family - Sans-Serif"       sans-serif
 @var text      fontFamilySerif "Font Family - Serif"        serif
 ==/UserStyle== */
-:root {
-  --max-col-width: var(--mainColumnMaxWidth,720px);
-  --font-family-sans: sans-serif;
-  --font-family-serif: serif;
-  --font-heading: sans-serif;
-  --main-bg: white;
-  --primary-text: #222;
-  --light-text: #555;
-  --faint-text: #aaa;
-  --heading-text: #000;
-  --horizontal-rule-border-bottom-props: 2px solid rgba(0, 0, 0, .25);
-  --end-horizontal-rule-border-bottom-props: 5px solid #000;
-  --link: blue;
-  --link-hover: navy;
-  --link-visited: rebeccapurple;
-  --link-active: red;
-  --image-shadow: none;
-  --image-border-props: 1px solid #000;
-  --image-border-radius: 0;
-  --button-bg: #ddd;
-  --button-fg: #000;
-  --button-hv: #ccc;
-  --button-active: #aaa;
-  --button-border-radius: 4px;
-  --input-border: 1px solid var(--light-text);
-  --input-border-focus: 1px solid var(--primary-text);
-  --input-border-radius: 4px;
-  --input-bg: #fff;
-  --input-focus-bg: #fffded;
-  --input-text-color: var(--primary-text);
-  --select-bg: linear-gradient(0deg, #EAEAEA 0%, #FFFFFF 100%);
-  --tab-bg: #eee;
-  --tab-fg: var(--link);
-  --tab-hv: var(--link-hover);
-  --tab-visited: var(--faint-text);
-  --tab-active: var(--link-active);
-  --table-text: var(--primary-text);
-  --table-border-color: rgba(0,0,0,.1);
-  --tab-bg: rgba(0,0,0,.05);
-  --tab-bg-hover: rgba(0,0,0,.1);
-  --tab-link: var(--link);
-  --tab-hover: var(--link-hover);
-  --tab-visited: var(--link-visited);
-  --tab-active: var(--link-active);
-  --tab-border-radius: 4px;
-  --quote-bg: rgba(0,0,0,.025);
-  --quote-border-color: var(--faint-text);
-  --sup-cite-font-size:.85em;
-  --sup-cite-bg:transparent;
-  --sup-cite-bg-hover:transparent;
-  --sup-cite-bg-active:transparent;
-  --sup-cite-bg-visited:transparent;
-  --sup-cite-fg:var(--link);
-  --sup-cite-fg-hover:var(--link-hover);
-  --sup-cite-fg-visited:var(--link-visited);
-  --sup-cite-fg-active:var(--link-active);
-  --sup-cite-border-radius:0px;
-  --sup-cite-text-shadow-props: 0 1px 0 transparent;
-  --back-to-top-bg: #000;
-  --back-to-top-fg: #fff;
-  --back-to-top-hover: #333;
-  --back-to-top-active: #111;
-  --back-to-top-shadow: none;
-  --back-to-top-border-radius: 100px; }
+@-moz-document domain("marxists.org"),domain("marxists.info"),domain("marxists.architexturez.net") {
+  :root {
+    --max-col-width: var(--mainColumnMaxWidth,720px);
+    --font-family-sans: sans-serif;
+    --font-family-serif: serif;
+    --font-heading: sans-serif;
+    --main-bg: white;
+    --primary-text: #222;
+    --light-text: #555;
+    --faint-text: #aaa;
+    --heading-text: #000;
+    --horizontal-rule-border-bottom-props: 2px solid rgba(0, 0, 0, .25);
+    --end-horizontal-rule-border-bottom-props: 5px solid #000;
+    --link: blue;
+    --link-hover: navy;
+    --link-visited: rebeccapurple;
+    --link-active: red;
+    --image-shadow: none;
+    --image-border-props: 1px solid #000;
+    --image-border-radius: 0;
+    --button-bg: #ddd;
+    --button-fg: #000;
+    --button-hv: #ccc;
+    --button-active: #aaa;
+    --button-border-radius: 4px;
+    --input-border: 1px solid var(--light-text);
+    --input-border-focus: 1px solid var(--primary-text);
+    --input-border-radius: 4px;
+    --input-bg: #fff;
+    --input-focus-bg: #fffded;
+    --input-text-color: var(--primary-text);
+    --select-bg: linear-gradient(0deg, #EAEAEA 0%, #FFFFFF 100%);
+    --tab-bg: #eee;
+    --tab-fg: var(--link);
+    --tab-hv: var(--link-hover);
+    --tab-visited: var(--faint-text);
+    --tab-active: var(--link-active);
+    --table-text: var(--primary-text);
+    --table-border-color: rgba(0,0,0,.1);
+    --tab-bg: rgba(0,0,0,.05);
+    --tab-bg-hover: rgba(0,0,0,.1);
+    --tab-link: var(--link);
+    --tab-hover: var(--link-hover);
+    --tab-visited: var(--link-visited);
+    --tab-active: var(--link-active);
+    --tab-border-radius: 4px;
+    --quote-bg: rgba(0,0,0,.025);
+    --quote-border-color: var(--faint-text);
+    --sup-cite-font-size:.85em;
+    --sup-cite-bg:transparent;
+    --sup-cite-bg-hover:transparent;
+    --sup-cite-bg-active:transparent;
+    --sup-cite-bg-visited:transparent;
+    --sup-cite-fg:var(--link);
+    --sup-cite-fg-hover:var(--link-hover);
+    --sup-cite-fg-visited:var(--link-visited);
+    --sup-cite-fg-active:var(--link-active);
+    --sup-cite-border-radius:0px;
+    --sup-cite-text-shadow-props: 0 1px 0 transparent;
+    --back-to-top-bg: #000;
+    --back-to-top-fg: #fff;
+    --back-to-top-hover: #333;
+    --back-to-top-active: #111;
+    --back-to-top-shadow: none;
+    --back-to-top-border-radius: 100px; }
+}
 
 @-moz-document domain("marxists.org"),domain("marxists.info"),domain("marxists.architexturez.net") {
   /*
