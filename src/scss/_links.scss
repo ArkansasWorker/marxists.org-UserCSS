@@ -42,7 +42,8 @@ a.anote,
 sup a:link,
 a span.NOTE,
 sup a[href],
-sup.ednote a[href] {
+sup.ednote a[href],
+sup.enote {
 	font-size: var(--sup-cite-font-size) !important;
 	color: var(--sup-cite-fg) !important;
 	background: var(--sup-cite-bg) !important;

@@ -2,7 +2,7 @@
 @name          Marxists.org Enhanced
 @description   A more readable Marxists.org. Features support for dark mode.
 @namespace     marxists-org.enhanced
-@version       0.0.10
+@version       0.0.11
 @author        ArkansasWorker <editor@arkansasworker.com> (https://github.com/ArkansasWorker)
 @homepageURL   https://github.com/ArkansasWorker/marxists.org-UserCSS
 @supportURL    https://github.com/ArkansasWorker/marxists.org-UserCSS/issues
@@ -583,7 +583,8 @@ https://necolas.github.io/normalize.css/
   p.dd em,
   p.dd strong,
   span.tilt,
-  span.name {
+  span.name,
+  span.duhring {
     color: inherit !important;
     font-size: inherit !important;
     font-family: inherit !important;
@@ -785,7 +786,8 @@ https://necolas.github.io/normalize.css/
   sup a:link,
   a span.NOTE,
   sup a[href],
-  sup.ednote a[href] {
+  sup.ednote a[href],
+  sup.enote {
     font-size: var(--sup-cite-font-size) !important;
     color: var(--sup-cite-fg) !important;
     background: var(--sup-cite-bg) !important;
@@ -806,7 +808,9 @@ https://necolas.github.io/normalize.css/
     sup a[href]:hover,
     sup a[href]:focus,
     sup.ednote a[href]:hover,
-    sup.ednote a[href]:focus {
+    sup.ednote a[href]:focus,
+    sup.enote:hover,
+    sup.enote:focus {
       background: var(--sup-cite-bg-hover) !important;
       color: var(--sup-cite-fg-hover) !important; }
     sup.anote a:visited,
@@ -814,7 +818,8 @@ https://necolas.github.io/normalize.css/
     sup a:link:visited,
     a span.NOTE:visited,
     sup a[href]:visited,
-    sup.ednote a[href]:visited {
+    sup.ednote a[href]:visited,
+    sup.enote:visited {
       background: var(--sup-cite-bg) !important;
       color: var(--sup-cite-fg) !important; }
     sup.anote a:active,
@@ -822,7 +827,8 @@ https://necolas.github.io/normalize.css/
     sup a:link:active,
     a span.NOTE:active,
     sup a[href]:active,
-    sup.ednote a[href]:active {
+    sup.ednote a[href]:active,
+    sup.enote:active {
       background: var(--sup-cite-bg-hover) !important;
       color: var(--sup-cite-fg-hover) !important; }
   sup.enote,
