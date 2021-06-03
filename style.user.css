@@ -584,7 +584,8 @@ https://necolas.github.io/normalize.css/
   p.dd strong,
   span.tilt,
   span.name,
-  span.duhring {
+  span.duhring,
+  font[size] {
     color: inherit !important;
     font-size: inherit !important;
     font-family: inherit !important;
