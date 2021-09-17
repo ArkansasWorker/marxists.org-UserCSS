@@ -2,7 +2,7 @@
 @name          Marxists.org Enhanced
 @description   A more readable Marxists.org. Features support for dark mode.
 @namespace     marxists-org.enhanced
-@version       0.0.12
+@version       0.0.13
 @author        ArkansasWorker <editor@arkansasworker.com> (https://github.com/ArkansasWorker)
 @homepageURL   https://github.com/ArkansasWorker/marxists.org-UserCSS
 @supportURL    https://github.com/ArkansasWorker/marxists.org-UserCSS/issues
@@ -759,6 +759,8 @@ https://necolas.github.io/normalize.css/
   p td.textc.textc {
     font-family: var(--font-family-sans) !important;
     color: var(--primary-text) !important; }
+  td.shade {
+    background: none !important; }
   a:empty {
     display: none; }
   a:link {
@@ -1059,6 +1061,7 @@ https://necolas.github.io/normalize.css/
     max-width: 100% !important;
     height: auto !important;
     margin: 0 !important; }
+  html,
   *[bgColor],
   body[style*="background"],
   body[bgColor],
@@ -1125,7 +1128,22 @@ https://necolas.github.io/normalize.css/
     font-family: inherit !important; }
   span.span {
     font-weight: bold !important;
-    font-size: 150% !important; } }
+    font-size: 150% !important; }
+  .header-title,
+  .header-info,
+  .header-chapter {
+    background: none !important;
+    border: 0 !important; }
+  .nav-contiguous,
+  .nav-main {
+    background: none !important;
+    border: 0 !important; }
+  .article-notes {
+    border-top: 2px solid var(--faint-text); }
+  .footnote-as-sidebar {
+    font-size: .85rem !important;
+    border: 0 !important;
+    line-height: 1.35 !important; } }
 
 /*
 
